@@ -1,0 +1,6 @@
+{
+  "name": "hotel-management",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Restaurant & hotel digital ordering and table-management system. See client/ and server/ for the two apps."
+}
