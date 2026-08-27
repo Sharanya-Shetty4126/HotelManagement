@@ -1,84 +1,190 @@
-// client/src/services/api.js
-//
-// Every page/component talks to the backend through the functions in this
-// file — never through mockData.js directly. Right now these functions
-// just resolve mock data after a short fake delay (so loading states are
-// real and visible). Once server/ has real endpoints, replace the body of
-// each function with an axios call and nothing else in the app has to change.
-//
-// Example of what this will look like later:
-//   export function getMenu() {
-//     return axiosClient.get("/api/menu").then((res) => res.data);
-//   }
+import axios from 'axios';
 
-import {
-  MENU_ITEMS,
-  MENU_CATEGORIES,
-  TABLES,
-  SESSIONS,
-  resolveTokenToSession,
-} from "../data/mockData";
+// const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'||'http://192.168.1.6:5000/api';
+// const API_BASE = ;
+const API_BASE = 'http://192.168.1.6:5000/api';
+// ============================================================
+// MENU API
+// ============================================================
 
-const FAKE_LATENCY_MS = 300;
-
-function resolveAfter(value) {
-  return new Promise((resolve) => setTimeout(() => resolve(value), FAKE_LATENCY_MS));
-}
-
-// ---------- Customer-facing ----------
-
-export function getMenu() {
-  return resolveAfter({ items: MENU_ITEMS, categories: MENU_CATEGORIES });
-}
-
-export function getSessionByToken(token) {
-  return resolveAfter(resolveTokenToSession(token));
-}
-
-export function placeOrder(token, cartItems) {
-  // In the real backend this creates an Order + OrderItems tied to the
-  // session the backend resolves from the token — never a session id the
-  // browser supplies directly (see the spec's security section).
-  const orderId = `ORD-${Math.floor(100 + Math.random() * 900)}`;
-  return resolveAfter({ orderId, status: "PLACED" });
-}
-
-// ---------- Admin-facing ----------
-
-export function getTables() {
-  return resolveAfter(TABLES);
-}
-
-export function getAllOrders() {
-  const orders = Object.values(SESSIONS).flatMap((session) =>
-    session.orders.map((order) => ({
-      ...order,
-      sessionId: session.id,
-      tableNumber: session.tableNumber,
-    }))
-  );
-  return resolveAfter(orders);
-}
-
-export function getSessionById(sessionId) {
-  return resolveAfter(SESSIONS[sessionId] || null);
-}
-
-export function updateOrderItemStatus(sessionId, orderId, itemId, status) {
-  const session = SESSIONS[sessionId];
-  const order = session?.orders.find((o) => o.id === orderId);
-  const item = order?.items.find((i) => i.id === itemId);
-  if (item) item.status = status;
-  return resolveAfter({ ok: true });
-}
-
-// ---------- Admin auth ----------
-
-export function loginAdmin(username, password) {
-  // Mock check only. The real backend issues a signed JWT after verifying
-  // credentials against the Admin table — never trust a frontend-only check.
-  if (username && password) {
-    return resolveAfter({ token: "mock-admin-jwt", name: username });
+export async function getMenu() {
+  try {
+    const response = await axios.get(`${API_BASE}/menu`);
+    return response.data;
+  } catch (error) {
+    console.error('Get menu error:', error);
+    throw error;
   }
-  return Promise.reject(new Error("Username and password are required"));
+}
+
+// ============================================================
+// SESSION API
+// ============================================================
+
+export async function getSessionEntry(qrToken) {
+  try {
+    const response = await axios.get(`${API_BASE}/session/entry/${qrToken}`);
+    return response.data;
+  } catch (error) {
+    console.error('Get session entry error:', error);
+    throw error;
+  }
+}
+
+export async function getSessionByToken(qrToken) {
+  try {
+    const response = await axios.get(`${API_BASE}/session/entry/${qrToken}`);
+    return response.data;
+  } catch (error) {
+    console.error('Get session by token error:', error);
+    throw error;
+  }
+}
+
+export async function createSession(qrToken, guestCount = 1) {
+  try {
+    const response = await axios.post(`${API_BASE}/session/create`, {
+      qrToken,
+      guestCount
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Create session error:', error);
+    throw error;
+  }
+}
+
+export async function joinSession(qrToken, sessionCode) {
+  try {
+    const response = await axios.post(`${API_BASE}/session/join`, {
+      qrToken,
+      sessionCode
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Join session error:', error);
+    throw error;
+  }
+}
+
+export async function getSessionById(sessionId) {
+  try {
+    const response = await axios.get(`${API_BASE}/session/${sessionId}`);
+    return response.data;
+  } catch (error) {
+    console.error('Get session error:', error);
+    throw error;
+  }
+}
+
+// ============================================================
+// ORDER API
+// ============================================================
+
+export async function placeOrder(sessionId, items, specialInstructions = '') {
+  try {
+    const response = await axios.post(`${API_BASE}/order`, {
+      sessionId,
+      items,
+      specialInstructions
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Place order error:', error);
+    throw error;
+  }
+}
+
+export async function getAllOrders() {
+  try {
+    const response = await axios.get(`${API_BASE}/order`);
+    return response.data;
+  } catch (error) {
+    console.error('Get orders error:', error);
+    throw error;
+  }
+}
+
+export async function updateOrderItemStatus(itemId, status) {
+  try {
+    const response = await axios.put(`${API_BASE}/order/item/${itemId}/status`, {
+      status
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Update item status error:', error);
+    throw error;
+  }
+}
+
+// ============================================================
+// ADMIN AUTH API
+// ============================================================
+
+export async function loginAdmin(username, password) {
+  try {
+    const response = await axios.post(`${API_BASE}/auth/login`, {
+      username,
+      password
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Login error:', error);
+    throw error;
+  }
+}
+
+
+// ============================================================
+// TABLE API
+// ============================================================
+
+export async function getTables() {
+  try {
+    const response = await axios.get(`${API_BASE}/tables`);
+    return response.data;
+  } catch (error) {
+    console.error('Get tables error:', error);
+    throw error;
+  }
+}
+
+export async function createTable(number, section, capacity) {
+  try {
+    const response = await axios.post(`${API_BASE}/tables`, {
+      number,
+      section,
+      capacity
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Create table error:', error);
+    throw error;
+  }
+}
+
+export async function updateTable(id, number, section, capacity) {
+  try {
+    const response = await axios.put(`${API_BASE}/tables/${id}`, {
+      number,
+      section,
+      capacity
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Update table error:', error);
+    throw error;
+  }
+}// ============================================================
+// BILL API
+// ============================================================
+
+export async function generateBill(sessionId) {
+  try {
+    const response = await axios.post(`${API_BASE}/session/${sessionId}/bill`);
+    return response.data;
+  } catch (error) {
+    console.error('Generate bill error:', error);
+    throw error;
+  }
 }

@@ -1,0 +1,7 @@
+npx prisma db seed
+
+npx prisma studio
+http://localhost:5173/table/{qrToken}
+1O8O5
+
+npx prisma studio

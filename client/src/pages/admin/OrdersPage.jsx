@@ -33,7 +33,7 @@ const OrdersPage = () => {
   useEffect(loadOrders, []);
 
   const handleItemStatusChange = async (order, itemId, status) => {
-    await updateOrderItemStatus(order.sessionId, order.id, itemId, status);
+    await updateOrderItemStatus(itemId, status);
     loadOrders();
   };
 
@@ -41,7 +41,7 @@ const OrdersPage = () => {
     await Promise.all(
       order.items
         .filter((i) => i.status !== "SERVED")
-        .map((i) => updateOrderItemStatus(order.sessionId, order.id, i.id, "READY"))
+        .map((i) => updateOrderItemStatus(i.id, "READY"))
     );
     loadOrders();
   };

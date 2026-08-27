@@ -1,39 +1,42 @@
 // client/src/context/CartContext.jsx
-//
-// MenuPage and CartPage need to share one cart. Previously each page had
-// its own separate mock array, so adding an item on the menu never showed
-// up in the cart. This context is the single source of truth for "what's
-// in the cart right now", scoped to the current table token.
-
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const CartContext = createContext(null);
 
-function storageKey(token) {
-  return `cart:${token || "unknown"}`;
+function storageKey(sessionId) {
+  return `cart:${sessionId || "unknown"}`;
 }
 
 export function CartProvider({ children }) {
-  const { token } = useParams();
+  const { sessionId } = useParams(); // ✅ FIXED: use sessionId, not token
   const [items, setItems] = useState(() => {
     try {
-      const saved = localStorage.getItem(storageKey(token));
+      const saved = localStorage.getItem(storageKey(sessionId));
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
     }
   });
 
-  // Persist per-table so a customer refreshing the page doesn't lose their cart.
+  // Persist per session
   useEffect(() => {
     try {
-      localStorage.setItem(storageKey(token), JSON.stringify(items));
+      localStorage.setItem(storageKey(sessionId), JSON.stringify(items));
     } catch {
-      // Storage can fail (private browsing, quota) — losing cart persistence
-      // isn't fatal, so we just skip saving rather than crash the page.
+      // Storage can fail
     }
-  }, [items, token]);
+  }, [items, sessionId]);
+
+  // ✅ Reset cart when session changes
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(storageKey(sessionId));
+      setItems(saved ? JSON.parse(saved) : []);
+    } catch {
+      setItems([]);
+    }
+  }, [sessionId]);
 
   const addItem = useCallback((menuItem) => {
     setItems((prev) => {
