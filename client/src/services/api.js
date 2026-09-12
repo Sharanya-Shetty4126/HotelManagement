@@ -1,8 +1,23 @@
 import axios from 'axios';
 
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+// ✅ Create axios instance with interceptor
+const axiosClient = axios.create({
+  baseURL: API_BASE,
+});
+
+// ✅ Auto-add token to every request
+axiosClient.interceptors.request.use((config) => {
+  const token = localStorage.getItem('adminToken');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 // const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'||'http://192.168.1.6:5000/api';
 // const API_BASE = ;
-const API_BASE = 'http://192.168.1.6:5000/api';
+// const API_BASE = 'http://192.168.1.6:5000/api';
 // ============================================================
 // MENU API
 // ============================================================
@@ -66,15 +81,9 @@ export async function joinSession(qrToken, sessionCode) {
     throw error;
   }
 }
-
 export async function getSessionById(sessionId) {
-  try {
-    const response = await axios.get(`${API_BASE}/session/${sessionId}`);
-    return response.data;
-  } catch (error) {
-    console.error('Get session error:', error);
-    throw error;
-  }
+  const response = await axiosClient.get(`/session/${sessionId}`);
+  return response.data;
 }
 
 // ============================================================
@@ -94,25 +103,29 @@ export async function placeOrder(sessionId, items, specialInstructions = '') {
     throw error;
   }
 }
-
 export async function getAllOrders() {
   try {
-    const response = await axios.get(`${API_BASE}/order`);
+    const response = await axios.get(
+      `${API_BASE}/order`,
+      adminRequest()
+    );
     return response.data;
   } catch (error) {
-    console.error('Get orders error:', error);
+    console.error("Get orders error:", error);
     throw error;
   }
 }
 
 export async function updateOrderItemStatus(itemId, status) {
   try {
-    const response = await axios.put(`${API_BASE}/order/item/${itemId}/status`, {
-      status
-    });
+    const response = await axios.put(
+      `${API_BASE}/order/item/${itemId}/status`,
+      { status },
+      adminRequest()
+    );
     return response.data;
   } catch (error) {
-    console.error('Update item status error:', error);
+    console.error("Update item status error:", error);
     throw error;
   }
 }
@@ -122,16 +135,8 @@ export async function updateOrderItemStatus(itemId, status) {
 // ============================================================
 
 export async function loginAdmin(username, password) {
-  try {
-    const response = await axios.post(`${API_BASE}/auth/login`, {
-      username,
-      password
-    });
-    return response.data;
-  } catch (error) {
-    console.error('Login error:', error);
-    throw error;
-  }
+  const response = await axiosClient.post('/auth/login', { username, password });
+  return response.data;
 }
 
 
@@ -178,13 +183,12 @@ export async function updateTable(id, number, section, capacity) {
 }// ============================================================
 // BILL API
 // ============================================================
+export async function confirmPayment(sessionId) {
+  const response = await axiosClient.put(`/session/${sessionId}/pay`);
+  return response.data;
+}
 
 export async function generateBill(sessionId) {
-  try {
-    const response = await axios.post(`${API_BASE}/session/${sessionId}/bill`);
-    return response.data;
-  } catch (error) {
-    console.error('Generate bill error:', error);
-    throw error;
-  }
+  const response = await axiosClient.post(`/session/${sessionId}/bill`);
+  return response.data;
 }

@@ -4,7 +4,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const { verifyQRToken } = require('../utils/qrToken');
 const { generateSessionCode } = require('../utils/sessionCode');
-const { notifyAdmin } = require('../socket');
+const { notifyAdmin } = require('../socket');  // ✅ UNCOMMENTED
 const adminAuth = require('../middleware/adminAuth');
 
 // A session still counts as "open"/occupying the table until CLOSED.

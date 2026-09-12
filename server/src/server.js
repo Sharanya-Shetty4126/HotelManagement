@@ -6,7 +6,6 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-// Define app
 const app = express();
 const server = http.createServer(app);
 
@@ -22,20 +21,21 @@ const io = new Server(server, {
 // Make io available inside route handlers
 app.set('io', io);
 
+// CORS - Use only ONE configuration
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://192.168.1.6:5173'],
+  origin: ['http://localhost:5173', 'http://192.168.0.144:5173'],
   credentials: true,
 }));
 app.use(express.json());
 
-// Import ALL routes
+// Import routes
 const authRoutes = require('./routes/auth');
 const sessionRoutes = require('./routes/session');
 const orderRoutes = require('./routes/order');
 const tableRoutes = require('./routes/tables');
 const menuRoutes = require('./routes/menu');
 
-// Mount ALL routes
+// Mount routes
 app.use('/api/auth', authRoutes);
 app.use('/api/session', sessionRoutes);
 app.use('/api/order', orderRoutes);
@@ -47,7 +47,7 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Server is running!' });
 });
 
-// Socket.io
+// Socket.io events
 io.on('connection', (socket) => {
   console.log('🟢 Client connected:', socket.id);
 
@@ -73,25 +73,15 @@ io.on('connection', (socket) => {
     console.log('🔴 Client disconnected:', socket.id);
   });
 });
-app.use(cors({
-  origin: '*',  // ✅ Allow all origins (for testing)
-  credentials: true,
-}));
 
 // Error handler
 app.use((err, req, res, next) => {
   console.error('Error:', err);
   res.status(500).json({ error: 'Something went wrong!' });
 });
+
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, '0.0.0.0', () => {
- console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📡 Test: http://localhost:${PORT}/api/health`);
-  console.log(`📡 Menu: http://localhost:${PORT}/api/menu`);});
-
-// const PORT = process.env.PORT || 5000;
-// server.listen(PORT, () => {
-//   console.log(`🚀 Server running on port ${PORT}`);
-//   console.log(`📡 Test: http://localhost:${PORT}/api/health`);
-//   console.log(`📡 Menu: http://localhost:${PORT}/api/menu`);
-// });
+});

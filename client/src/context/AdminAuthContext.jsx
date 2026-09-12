@@ -23,6 +23,10 @@ export function AdminAuthProvider({ children }) {
     return result;
   }, []);
 
+
+
+  
+
   const logout = useCallback(() => {
     localStorage.removeItem("adminToken");
     localStorage.removeItem("adminName");

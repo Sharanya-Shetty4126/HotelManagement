@@ -5,6 +5,7 @@ import { getSessionById, updateOrderItemStatus } from "../../services/api";
 import { formatCurrency } from "../../utils/format";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import axios from "axios";
+import { confirmPayment } from "../../services/api";
 
 export default function TableSessionPage() {
   const { sessionId } = useParams();
@@ -45,37 +46,34 @@ export default function TableSessionPage() {
   };
 
   const handleConfirmPayment = async () => {
-    if (!session?.bill) {
-      alert("No bill to pay.");
-      return;
-    }
-    if (session.bill.paymentConfirmed) {
-      alert("Payment already confirmed.");
-      return;
-    }
-    if (!window.confirm("Confirm payment and close this session?")) return;
+  if (!session?.bill) {
+    alert("No bill to pay.");
+    return;
+  }
+  if (session.bill.paymentConfirmed) {
+    alert("Payment already confirmed.");
+    return;
+  }
+  if (!window.confirm("Confirm payment and close this session?")) return;
 
-    setProcessingPayment(true);
-    try {
-      const response = await axios.put(
-        `http://localhost:5000/api/session/${sessionId}/pay`
-      );
-      console.log("Payment response:", response.data);
-      if (response.data.success) {
-        alert("✅ Payment confirmed! Session closed.");
-        navigate("/admin/tables");
-      } else {
-        alert("Payment failed: " + response.data.message);
-      }
-    } catch (error) {
-      console.error("Payment error:", error);
-      const msg = error.response?.data?.error || "Failed to confirm payment";
-      alert("❌ " + msg);
-    } finally {
-      setProcessingPayment(false);
+  setProcessingPayment(true);
+  try {
+    const response = await confirmPayment(sessionId);
+    console.log("Payment response:", response);
+    if (response.success) {
+      alert("✅ Payment confirmed! Session closed.");
+      navigate("/admin/tables");
+    } else {
+      alert("Payment failed: " + response.message);
     }
-  };
-
+  } catch (error) {
+    console.error("Payment error:", error);
+    const msg = error.response?.data?.error || "Failed to confirm payment";
+    alert("❌ " + msg);
+  } finally {
+    setProcessingPayment(false);
+  }
+};
   const handleViewBill = () => {
     if (session?.bill) {
       const bill = session.bill;

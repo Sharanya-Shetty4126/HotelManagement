@@ -5,3 +5,17 @@ http://localhost:5173/table/{qrToken}
 1O8O5
 
 npx prisma studio
+
+
+# 1. Push the schema (if you haven't already)
+npx prisma db push --force-reset
+
+# 2. Seed the data
+npx prisma db seed
+
+# 3. Start the backend
+npm run dev
+
+# 4. In another terminal, start the frontend
+cd ../client
+npm run dev -- --host
