@@ -17,20 +17,30 @@ export default function SessionEntry() {
   const [showJoinInput, setShowJoinInput] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getSessionEntry(qrToken);
-        setTable(data.table);
-        setActiveSessions(data.activeSessions || []);
-      } catch (err) {
-        setError('Invalid QR code. Please scan again.');
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [qrToken]);
+  const fetchData = async () => {
+    try {
+      const data = await getSessionEntry(qrToken);
+      setTable(data.table);
+      setActiveSessions(data.activeSessions || []);
+    } catch (err) {
+      console.error('SessionEntry error:', err);
 
+      // ✅ Distinguish between network errors and actual invalid QR
+      if (!err.response) {
+        setError('Cannot reach the server. Check your network or backend URL.');
+      } else if (err.response.status === 400) {
+        setError('Invalid QR code. Please scan again.');
+      } else if (err.response.status === 404) {
+        setError('Table not found. Please contact staff.');
+      } else {
+        setError(err.response.data?.error || 'Something went wrong. Please try again.');
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchData();
+}, [qrToken]);
   const handleCreateSession = async () => {
     setCreating(true);
     setError('');
