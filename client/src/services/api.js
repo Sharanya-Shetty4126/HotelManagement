@@ -2,8 +2,7 @@ import axios from 'axios';
 
 // const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 // Change this line temporarily:
-const API_BASE = 'http://192.168.0.144:5000/api';
-// ✅ Create axios instance with token interceptor
+const API_BASE = "https://hotelmanagement-2qak.onrender.com/api";// ✅ Create axios instance with token interceptor
 const axiosClient = axios.create({
   baseURL: API_BASE,
 });
