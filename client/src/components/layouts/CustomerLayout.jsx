@@ -1,4 +1,3 @@
-// client/src/components/layouts/CustomerLayout.jsx
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getSessionById } from "../../services/api";
@@ -6,7 +5,6 @@ import { getSessionById } from "../../services/api";
 export default function CustomerLayout({ children }) {
   const { sessionId } = useParams();
   const [session, setSession] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchSession = async () => {
@@ -16,11 +14,7 @@ export default function CustomerLayout({ children }) {
           setSession(data);
         } catch (error) {
           console.error("Failed to fetch session:", error);
-        } finally {
-          setLoading(false);
         }
-      } else {
-        setLoading(false);
       }
     };
     fetchSession();
@@ -31,7 +25,6 @@ export default function CustomerLayout({ children }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* ✅ Header with Table Number & Session Code */}
       <header className="bg-white shadow-sm sticky top-0 z-10 border-b">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -47,7 +40,15 @@ export default function CustomerLayout({ children }) {
               )}
             </div>
           </div>
+
+          {/* ✅ ADD MENU LINK BACK */}
           <div className="flex items-center gap-4">
+            <Link
+              to={`/session/${sessionId}/menu`}
+              className="text-sm text-gray-600 hover:text-gray-900"
+            >
+              Menu
+            </Link>
             <Link
               to={`/session/${sessionId}/orders`}
               className="text-sm text-gray-600 hover:text-gray-900"

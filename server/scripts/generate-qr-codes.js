@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 
 // ⚠️ Change this to your actual frontend URL
 // For local network testing:
-const BASE_URL = 'http://192.168.0.144:5173';  // <-- your IP here
+const BASE_URL =  "https://hotelmanagement-15m.pages.dev";  // <-- your IP here
 // For deployment: 'https://yourdomain.com'
 
 async function generateQRCodes() {

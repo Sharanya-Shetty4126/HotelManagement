@@ -2,6 +2,8 @@ npx prisma db seed
 
 npx prisma studio
 http://localhost:5173/table/{qrToken}
+
+https://hotelmanagement-15m.pages.dev/table/
 1O8O5
 
 npx prisma studio
