@@ -23,8 +23,12 @@ app.set('io', io);
 
 // CORS - Use only ONE configuration
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://192.168.0.144:5173'],
-  credentials: true,
+  origin: [
+    "http://localhost:5173",
+    "http://192.168.0.144:5173",
+    "https://hotelmanagement-15m.pages.dev"
+  ],
+  credentials: true
 }));
 app.use(express.json());
 
