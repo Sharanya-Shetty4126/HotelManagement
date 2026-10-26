@@ -2,24 +2,16 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getSessionById } from "../../services/api";
-import { getOrderStatusStyles } from "../../utils/format";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import io from "socket.io-client";
-
-const STATUS_ORDER = ["PENDING", "ACCEPTED", "PREPARING", "READY", "SERVED"];
-const STATUS_EMOJIS = {
-  PENDING: "⏳",
-  ACCEPTED: "✅",
-  PREPARING: "👨‍🍳",
-  READY: "🍽️",
-  SERVED: "🎉"
-};
+import { Clock, CheckCircle2, ArrowLeft } from "lucide-react";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function OrderTrackingPage() {
   const { sessionId } = useParams();
+  const { t, language, getItemName } = useLanguage();
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [socket, setSocket] = useState(null);
 
   const fetchOrders = async () => {
     try {
@@ -35,50 +27,35 @@ export default function OrderTrackingPage() {
   useEffect(() => {
     fetchOrders();
 
-    // ✅ Real-time updates via Socket.io
-    const newSocket = io(import.meta.env.VITE_API_URL || "http://localhost:5000");
+    // Real-time updates via Socket.io
+    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const newSocket = io(socketUrl);
     newSocket.emit("join-session", sessionId);
-    
-    newSocket.on("order-update", (data) => {
-      setOrders(prev => prev.map(order => {
-        if (order.id === data.orderId) {
-          return {
-            ...order,
-            items: order.items.map(item =>
-              item.id === data.itemId ? { ...item, status: data.status } : item
-            )
-          };
-        }
-        return order;
-      }));
-    });
 
-    setSocket(newSocket);
+    newSocket.on("order-update", () => {
+      fetchOrders();
+    });
 
     return () => newSocket.disconnect();
   }, [sessionId]);
 
   const getOverallStatus = (items) => {
     if (!items || items.length === 0) return "PENDING";
-    if (items.every(item => item.status === "SERVED")) return "SERVED";
-    if (items.some(item => item.status === "PENDING")) return "PENDING";
-    if (items.some(item => item.status === "PREPARING")) return "PREPARING";
-    if (items.some(item => item.status === "READY")) return "READY";
+    if (items.every((item) => item.status === "SERVED")) return "SERVED";
     return "PENDING";
   };
-
-  const getStatusIndex = (status) => STATUS_ORDER.indexOf(status);
 
   if (loading) return <LoadingSpinner label="Loading orders..." />;
 
   if (orders.length === 0) {
     return (
-      <div className="text-center py-12">
-        <p className="text-2xl mb-4">🍽️</p>
-        <p className="text-gray-500">No orders placed yet.</p>
+      <div className="text-center py-16 bg-white rounded-2xl shadow-sm border p-8 max-w-md mx-auto">
+        <p className="text-4xl mb-3">🍽️</p>
+        <h2 className="text-xl font-bold text-gray-800">No Orders Placed Yet</h2>
+        <p className="text-gray-500 text-sm mt-1 mb-6">Choose delicious items from our coastal menu.</p>
         <Link
           to={`/session/${sessionId}/menu`}
-          className="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          className="inline-flex items-center gap-2 px-6 py-2.5 bg-julius-teal text-white rounded-xl font-semibold hover:bg-julius-teal-light shadow-sm transition-colors text-sm"
         >
           Browse Menu
         </Link>
@@ -87,88 +64,128 @@ export default function OrderTrackingPage() {
   }
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-6">📋 Order Status</h1>
-      
+    <div className="max-w-xl mx-auto pb-12 font-sans space-y-4">
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-3">
+          <Link
+            to={`/session/${sessionId}/menu`}
+            className="p-2 hover:bg-gray-100 rounded-xl transition-colors text-gray-600"
+          >
+            <ArrowLeft size={20} />
+          </Link>
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">📋 {t("liveOrders")}</h1>
+            <p className="text-xs text-gray-500">{t("trackOrdersDesc")}</p>
+          </div>
+        </div>
+      </div>
+
       {orders.map((order) => {
         const overallStatus = getOverallStatus(order.items);
-        const statusStyle = getOrderStatusStyles(overallStatus);
-        const currentIndex = getStatusIndex(overallStatus);
-        const emoji = STATUS_EMOJIS[overallStatus] || "⏳";
-        
+        const isServed = overallStatus === "SERVED";
+
         return (
-          <div key={order.id} className="bg-white rounded-lg shadow-sm border p-4 mb-4">
-            {/* Order Header */}
-            <div className="flex items-center justify-between mb-3">
-              <div>
-                <span className="font-mono text-sm font-medium text-gray-700">
-                  Order #{order.id.slice(-6)}
+          <div
+            key={order.id}
+            className="bg-white rounded-2xl shadow-sm border border-julius-sand overflow-hidden hover:shadow-md transition-shadow"
+          >
+            {/* Header */}
+            <div className="px-5 py-3.5 bg-[#FBF9F5] border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-sm font-bold text-gray-800">
+                  #{order.id.slice(-6)}
                 </span>
-                <span className="text-sm text-gray-400 ml-3">
-                  {new Date(order.placedAt).toLocaleTimeString()}
+                <span className="text-xs text-gray-400 flex items-center gap-1">
+                  <Clock size={12} />
+                  {new Date(order.placedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                 </span>
               </div>
-              <span className={`px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1 ${statusStyle.bg} ${statusStyle.text}`}>
-                {emoji} {statusStyle.label}
+
+              <span
+                className={`px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 ${
+                  isServed
+                    ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                    : "bg-amber-50 text-amber-800 border border-amber-200"
+                }`}
+              >
+                <span>{isServed ? "🎉" : "⏳"}</span>
+                <span>{isServed ? t("served") : t("pending")}</span>
               </span>
             </div>
 
-            {/* Status Progress Bar */}
-            <div className="mb-4">
-              <div className="flex items-center gap-1">
-                {STATUS_ORDER.map((status, idx) => {
-                  const isCompleted = idx <= currentIndex;
-                  const isActive = idx === currentIndex;
-                  return (
-                    <div key={status} className="flex-1 flex flex-col items-center">
-                      <div
-                        className={`w-full h-2 rounded ${
-                          isCompleted ? "bg-green-500" : "bg-gray-200"
-                        } ${idx === 0 ? "rounded-l-full" : ""} ${
-                          idx === STATUS_ORDER.length - 1 ? "rounded-r-full" : ""
-                        }`}
-                      />
-                      <span
-                        className={`text-[10px] mt-1 text-center ${
-                          isActive ? "text-blue-600 font-medium" : "text-gray-400"
-                        }`}
-                      >
-                        {status === "PENDING" ? "⏳" : ""}
-                        {status === "ACCEPTED" ? "✅" : ""}
-                        {status === "PREPARING" ? "👨‍🍳" : ""}
-                        {status === "READY" ? "🍽️" : ""}
-                        {status === "SERVED" ? "🎉" : ""}
-                      </span>
-                    </div>
-                  );
-                })}
+            {/* Clean 2-Step Progress Bar (Pending -> Served) */}
+            <div className="px-5 pt-4 pb-3">
+              <div className="flex items-center justify-between text-xs font-bold mb-1.5">
+                <span className={isServed ? "text-emerald-700" : "text-amber-700"}>
+                  1. {t("orderReceived")}
+                </span>
+                <span className={isServed ? "text-emerald-700" : "text-gray-400"}>
+                  2. {t("served")}
+                </span>
+              </div>
+              <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden flex">
+                <div
+                  className={`h-full transition-all duration-500 rounded-full ${
+                    isServed ? "w-full bg-emerald-500" : "w-1/2 bg-amber-400 animate-pulse"
+                  }`}
+                />
               </div>
             </div>
 
-            {/* Order Items */}
-            <div className="space-y-1.5">
-              {order.items.map((item) => {
-                const itemStyle = getOrderStatusStyles(item.status);
-                return (
-                  <div key={item.id} className="flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0">
-                    <span>
-                      <span className="font-medium">{item.quantity}x</span> {item.name}
-                    </span>
-                    <div className="flex items-center gap-3">
-                      <span className="text-gray-500">₹{item.price * item.quantity}</span>
-                      <span className={`px-2 py-0.5 rounded-full text-xs ${itemStyle.bg} ${itemStyle.text}`}>
-                        {itemStyle.label}
-                      </span>
+            {/* Items List */}
+            <div className="px-5 py-2 divide-y divide-gray-100 text-sm">
+              {order.items.map((item) => (
+                <div key={item.id} className="py-2.5 flex items-center justify-between flex-wrap gap-2">
+                  <div className="flex items-center gap-2.5">
+                    <span className="font-bold text-gray-900 w-5">{item.quantity}x</span>
+                    <div>
+                      <span className="font-medium text-gray-800">{getItemName(item)}</span>
+                      {language === "kn" && item.name !== getItemName(item) && (
+                        <span className="text-[11px] text-gray-400 block -mt-0.5">{item.name}</span>
+                      )}
                     </div>
                   </div>
-                );
-              })}
+
+                  <div className="flex items-center gap-2.5">
+                    <span className="font-medium text-gray-600 text-xs">₹{item.price * item.quantity}</span>
+                    <span
+                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                        item.status === "SERVED"
+                          ? "bg-emerald-100 text-emerald-800"
+                          : "bg-amber-100 text-amber-800"
+                      }`}
+                    >
+                      {item.status === "SERVED" ? t("served") : t("pending")}
+                    </span>
+                  </div>
+                </div>
+              ))}
+
+              {order.specialInstructions && (
+                <p className="py-2 text-xs italic text-amber-700 bg-amber-50/60 px-3 rounded-lg my-1">
+                  Note: "{order.specialInstructions}"
+                </p>
+              )}
             </div>
 
-            {/* Total */}
-            <div className="mt-3 pt-2 border-t flex justify-between font-medium">
-              <span>Total</span>
-              <span>₹{order.total}</span>
+            {/* Footer with Total and Status */}
+            <div className="px-5 py-3 bg-[#FBF9F5] border-t border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gray-500 uppercase tracking-wider font-semibold">{t("total")}:</span>
+                <span className="text-base font-bold text-julius-teal">₹{order.total}</span>
+              </div>
+
+              <div>
+                {isServed ? (
+                  <span className="text-[11px] text-emerald-700 font-bold flex items-center gap-1 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                    <CheckCircle2 size={13} /> {t("completed")}
+                  </span>
+                ) : (
+                  <span className="text-[11px] text-amber-800 font-bold flex items-center gap-1 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
+                    <Clock size={13} /> {t("pending")}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         );

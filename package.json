@@ -1,28 +1,17 @@
 {
-  "name": "hotel-management-server",
+  "name": "hotel-management-root",
   "version": "1.0.0",
-  "description": "Backend API for hotel management system",
-  "main": "src/index.js",
+  "description": "Full-stack Hotel & Restaurant Management System",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
-    "prisma:generate": "npx prisma generate",
-    "prisma:migrate": "npx prisma migrate dev",
-    "prisma:studio": "npx prisma studio",
-    "prisma:seed": "node prisma/seed.js"
-  },
-  "dependencies": {
-    "@prisma/client": "^5.6.0",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "prisma": "^5.6.0",
-    "qrcode": "^1.5.4",
-    "socket.io": "^4.7.2"
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,green\" \"npm --prefix server run dev\" \"npm --prefix client run dev -- --host\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev -- --host",
+    "build": "npm --prefix client run build",
+    "prisma:generate": "npm --prefix server run prisma:generate",
+    "prisma:studio": "npm --prefix server run prisma:studio",
+    "prisma:seed": "npm --prefix server run prisma:seed"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "concurrently": "^9.1.2"
   }
 }

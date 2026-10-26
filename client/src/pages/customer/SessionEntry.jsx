@@ -94,29 +94,39 @@ export default function SessionEntry() {
         </div>
       )}
 
-      {/* ✅ ALWAYS: Start New Session */}
-      <button
-        onClick={handleCreateSession}
-        disabled={creating}
-        className="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50"
-      >
-        {creating ? 'Creating...' : 'Start New Session'}
-      </button>
+      {/* If Active Session Exists on Table */}
+      {hasActiveSessions ? (
+        <div className="space-y-3">
+          <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+              Dining In Progress
+            </span>
+            <p className="text-sm font-semibold text-gray-800 mt-2">
+              Table {table?.number} Session: <span className="font-mono font-bold text-blue-600">#{activeSessions[0].sessionCode}</span>
+            </p>
+            <p className="text-xs text-gray-500 mt-0.5">
+              {activeSessions[0].orderCount || 0} orders placed
+            </p>
+          </div>
 
-      {/* ✅ ONLY IF: Active sessions exist → Show "Join Existing Session" */}
-      {hasActiveSessions && (
-        <div className="mt-4">
+          <button
+            onClick={() => navigate(`/session/${activeSessions[0].id}/menu`)}
+            className="w-full py-3.5 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 shadow-sm transition-colors flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <span>🍽️ Continue to Menu & Orders</span>
+          </button>
+
           {!showJoinInput ? (
             <button
               onClick={() => setShowJoinInput(true)}
-              className="w-full py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+              className="w-full py-2.5 border border-gray-300 text-gray-600 rounded-xl text-xs font-semibold hover:bg-gray-50 transition-colors"
             >
-              Join Existing Session
+              Enter a different session code
             </button>
           ) : (
-            <div className="border rounded-lg p-4 bg-gray-50">
-              <p className="text-sm text-gray-700 mb-2">
-                Enter the session code <span className="font-semibold">(shown on your friend's phone)</span>:
+            <div className="border rounded-xl p-4 bg-gray-50">
+              <p className="text-xs text-gray-700 mb-2 font-medium">
+                Enter session code shown on friend's screen:
               </p>
               <div className="flex gap-2">
                 <input
@@ -124,14 +134,14 @@ export default function SessionEntry() {
                   placeholder="e.g., AB7X3"
                   value={joinCode}
                   onChange={(e) => setJoinCode(e.target.value.toUpperCase().slice(0, 5))}
-                  className="flex-1 border p-2 rounded-lg uppercase text-center text-xl font-bold tracking-widest"
+                  className="flex-1 border p-2 rounded-lg uppercase text-center text-lg font-bold tracking-widest bg-white"
                   maxLength="5"
                   autoFocus
                 />
                 <button
                   onClick={handleJoinSession}
                   disabled={!joinCode || joining}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 text-sm font-bold"
                 >
                   {joining ? 'Joining...' : 'Join'}
                 </button>
@@ -142,13 +152,21 @@ export default function SessionEntry() {
                   setJoinCode('');
                   setError('');
                 }}
-                className="mt-2 text-sm text-gray-500 hover:text-gray-700"
+                className="mt-2 text-xs text-gray-500 hover:text-gray-700"
               >
                 Cancel
               </button>
             </div>
           )}
         </div>
+      ) : (
+        <button
+          onClick={handleCreateSession}
+          disabled={creating}
+          className="w-full py-3.5 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 shadow-sm transition-colors disabled:opacity-50 cursor-pointer"
+        >
+          {creating ? 'Starting Session...' : '🍽️ Start Dining Session'}
+        </button>
       )}
     </div>
   );

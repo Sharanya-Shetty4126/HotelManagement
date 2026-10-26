@@ -1,3 +1,4 @@
+// server/src/server.js
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
@@ -9,35 +10,60 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 
-// Socket.io
+// Allowed origins
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'http://127.0.0.1:5173',
+  process.env.CLIENT_URL,
+].filter(Boolean);
+
+// Socket.io configuration
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps, curl, or same-origin)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin) || origin.startsWith('http://192.168.') || origin.startsWith('http://10.')) {
+        return callback(null, true);
+      }
+      return callback(null, true); // Dev-friendly permissive CORS
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   },
 });
 
-// Make io available inside route handlers
+// Attach socket io instance to app
 app.set('io', io);
 
-// CORS - Use only ONE configuration
+// Initialize socket listeners
+const { initSocket } = require('./socket');
+initSocket(io);
+
+// Express CORS Middleware
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "http://192.168.0.144:5173",
-    "https://hotelmanagement-15m.pages.dev"
-  ],
-  credentials: true
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin) || origin.startsWith('http://192.168.') || origin.startsWith('http://10.')) {
+      return callback(null, true);
+    }
+    return callback(null, true);
+  },
+  credentials: true,
 }));
+
 app.use(express.json());
 
-// Import routes
+// Import all routes
 const authRoutes = require('./routes/auth');
 const sessionRoutes = require('./routes/session');
 const orderRoutes = require('./routes/order');
 const tableRoutes = require('./routes/tables');
 const menuRoutes = require('./routes/menu');
+const dashboardRoutes = require('./routes/dashboard');
+const requestRoutes = require('./routes/requests');
+const ttsRoutes = require('./routes/tts');
 
 // Mount routes
 app.use('/api/auth', authRoutes);
@@ -45,47 +71,38 @@ app.use('/api/session', sessionRoutes);
 app.use('/api/order', orderRoutes);
 app.use('/api/tables', tableRoutes);
 app.use('/api/menu', menuRoutes);
+app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/requests', requestRoutes);
+app.use('/api/tts', ttsRoutes);
 
-// Health check
+// Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Server is running!' });
-});
-
-// Socket.io events
-io.on('connection', (socket) => {
-  console.log('🟢 Client connected:', socket.id);
-
-  socket.on('join-session', (sessionId) => {
-    socket.join(`session:${sessionId}`);
-    console.log(`Socket ${socket.id} joined session ${sessionId}`);
-  });
-
-  socket.on('join-admin', () => {
-    socket.join('admin');
-    console.log(`Socket ${socket.id} joined admin room`);
-  });
-
-  socket.on('order-notification', (data) => {
-    io.to('admin').emit('order-notification', data);
-  });
-
-  socket.on('bill-notification', (data) => {
-    io.to('admin').emit('bill-notification', data);
-  });
-
-  socket.on('disconnect', () => {
-    console.log('🔴 Client disconnected:', socket.id);
+  res.json({
+    status: 'ok',
+    message: 'Hotel Management API is running smoothly',
+    timestamp: new Date().toISOString()
   });
 });
 
-// Error handler
+// 404 handler for undefined API routes
+app.use('/api/*', (req, res) => {
+  res.status(404).json({ error: `API route ${req.originalUrl} not found` });
+});
+
+// Global Error Handler
 app.use((err, req, res, next) => {
-  console.error('Error:', err);
-  res.status(500).json({ error: 'Something went wrong!' });
+  console.error('❌ Server Error:', err);
+  const status = err.status || 500;
+  res.status(status).json({
+    error: err.message || 'Internal server error',
+    ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
+  });
 });
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📡 Test: http://localhost:${PORT}/api/health`);
+  console.log(`🚀 Hotel Management Server running on port ${PORT}`);
+  console.log(`📡 Health Check: http://localhost:${PORT}/api/health`);
 });
+
+module.exports = { app, server, io };

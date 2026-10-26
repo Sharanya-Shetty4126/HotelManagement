@@ -39,6 +39,11 @@ router.post('/login', async (req, res) => {
 
   } catch (error) {
     console.error('Admin login error:', error);
+    if (error.name === 'PrismaClientInitializationError' || error.message?.includes('Authentication failed')) {
+      return res.status(500).json({ 
+        error: 'Database connection failed. Your Supabase project may be paused due to inactivity, or credentials in server/.env need updating.' 
+      });
+    }
     res.status(500).json({ error: 'Login failed. Please try again.' });
   }
 });

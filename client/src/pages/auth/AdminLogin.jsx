@@ -19,7 +19,13 @@ export default function AdminLogin() {
       await login(username, password);
       navigate("/admin");
     } catch (err) {
-      setError("Invalid credentials. Please try again.");
+      if (err.response?.data?.error) {
+        setError(err.response.data.error);
+      } else if (err.code === "ERR_NETWORK" || !err.response) {
+        setError("Cannot connect to server. Please make sure the backend server is running on port 5000.");
+      } else {
+        setError(err.message || "Invalid credentials. Please try again.");
+      }
     } finally {
       setLoading(false);
     }
@@ -70,11 +76,24 @@ export default function AdminLogin() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+            className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 font-medium"
           >
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
+
+        <div className="mt-4 pt-4 border-t text-center">
+          <button
+            type="button"
+            onClick={() => {
+              setUsername("admin");
+              setPassword("admin123");
+            }}
+            className="text-xs text-blue-600 hover:text-blue-800 underline font-medium"
+          >
+            Auto-fill demo credentials (admin / admin123)
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -26,36 +26,22 @@ export const TABLE_STATUS_STYLES = {
 // ============================================================
 
 export function getOrderStatus(order) {
-  if (!order || !order.items) return 'PENDING';
+  if (!order || !order.items || order.items.length === 0) return 'PENDING';
   
   if (order.items.every(item => item.status === 'SERVED')) {
     return 'SERVED';
-  }
-  if (order.items.some(item => item.status === 'PENDING')) {
-    return 'PENDING';
-  }
-  if (order.items.some(item => item.status === 'PREPARING')) {
-    return 'PREPARING';
-  }
-  if (order.items.some(item => item.status === 'READY')) {
-    return 'READY';
   }
   return 'PENDING';
 }
 
 export const ORDER_STATUS_STYLES = {
-  PENDING: { bg: "bg-red-100", text: "text-red-700", dot: "bg-red-500", label: "Pending" },
-  ACCEPTED: { bg: "bg-blue-100", text: "text-blue-700", dot: "bg-blue-500", label: "Accepted" },
-  PREPARING: { bg: "bg-yellow-100", text: "text-yellow-700", dot: "bg-yellow-500", label: "Preparing" },
-  READY: { bg: "bg-green-100", text: "text-green-700", dot: "bg-green-500", label: "Ready" },
-  SERVED: { bg: "bg-gray-100", text: "text-gray-700", dot: "bg-gray-500", label: "Served" },
+  PENDING: { bg: "bg-amber-50", text: "text-amber-700", dot: "bg-amber-500", label: "Pending" },
+  SERVED: { bg: "bg-emerald-50", text: "text-emerald-700", dot: "bg-emerald-500", label: "Served" },
 };
 
 export const ORDER_ITEM_STATUS_STYLES = {
-  PENDING: { bg: "bg-red-100", text: "text-red-700", border: "border-red-200", label: "Pending" },
-  PREPARING: { bg: "bg-yellow-100", text: "text-yellow-700", border: "border-yellow-200", label: "Preparing" },
-  READY: { bg: "bg-blue-100", text: "text-blue-700", border: "border-blue-200", label: "Ready" },
-  SERVED: { bg: "bg-green-100", text: "text-green-700", border: "border-green-200", label: "Served" },
+  PENDING: { bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-200", label: "Pending" },
+  SERVED: { bg: "bg-emerald-50", text: "text-emerald-700", border: "border-emerald-200", label: "Served" },
 };
 
 // ============================================================
