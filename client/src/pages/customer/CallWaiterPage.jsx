@@ -8,7 +8,7 @@ import { useLanguage } from "../../context/LanguageContext";
 
 export default function CallWaiterPage() {
   const { sessionId } = useParams();
-  const { language, t, speakText } = useLanguage();
+  const { language, t } = useLanguage();
   const [submitting, setSubmitting] = useState(null);
   const [customNote, setCustomNote] = useState("");
   const [requests, setRequests] = useState([]);
@@ -42,14 +42,35 @@ export default function CallWaiterPage() {
     loadRequests();
 
     const socketUrl = getSocketUrl();
-    const socket = io(socketUrl);
-    socket.emit("join-session", sessionId);
+    const socket = io(socketUrl, {
+      transports: ["websocket", "polling"],
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 1000,
+    });
+
+    const joinSession = () => {
+      if (sessionId) {
+        socket.emit("join-session", sessionId);
+      }
+    };
+
+    socket.on("connect", joinSession);
+    if (socket.connected) {
+      joinSession();
+    }
 
     socket.on("request-resolved", () => {
       loadRequests();
     });
 
-    return () => socket.disconnect();
+    // 10-second polling fallback so requests are always fresh
+    const interval = setInterval(loadRequests, 10000);
+
+    return () => {
+      clearInterval(interval);
+      socket.disconnect();
+    };
   }, [sessionId]);
 
   const handleSendRequest = async (type, note = customNote) => {
@@ -65,7 +86,6 @@ export default function CallWaiterPage() {
         : `Requested ${label}. Table server has been notified!`;
 
       setSuccessMsg(message);
-      speakText(message);
       setCustomNote("");
       await loadRequests();
       setTimeout(() => setSuccessMsg(""), 5000);

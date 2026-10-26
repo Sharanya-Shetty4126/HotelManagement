@@ -10,7 +10,7 @@ export default function CartPage() {
   const { sessionId } = useParams();
   const navigate = useNavigate();
   const { items, updateQuantity, removeItem, clearCart, subtotal, itemCount } = useCart();
-  const { language, t, getItemName, speakText } = useLanguage();
+  const { language, t, getItemName } = useLanguage();
   const [placing, setPlacing] = useState(false);
   const [error, setError] = useState("");
 
@@ -30,8 +30,6 @@ export default function CartPage() {
 
       await placeOrder(sessionId, orderItems);
       clearCart();
-      const confirmSpeech = language === "kn" ? "ಆರ್ಡರ್ ಯಶಸ್ವಿಯಾಗಿ ನೀಡಲಾಗಿದೆ!" : "Order placed successfully!";
-      speakText(confirmSpeech);
       navigate(`/session/${sessionId}/orders`);
     } catch (err) {
       console.error("Order error:", err);

@@ -29,14 +29,34 @@ export default function OrderTrackingPage() {
 
     // Real-time updates via Socket.io
     const socketUrl = getSocketUrl();
-    const newSocket = io(socketUrl);
-    newSocket.emit("join-session", sessionId);
+    const newSocket = io(socketUrl, {
+      transports: ["websocket", "polling"],
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 1000,
+    });
+
+    const joinSession = () => {
+      if (sessionId) {
+        newSocket.emit("join-session", sessionId);
+      }
+    };
+
+    newSocket.on("connect", joinSession);
+    if (newSocket.connected) {
+      joinSession();
+    }
 
     newSocket.on("order-update", () => {
       fetchOrders();
     });
 
-    return () => newSocket.disconnect();
+    const interval = setInterval(fetchOrders, 8000);
+
+    return () => {
+      clearInterval(interval);
+      newSocket.disconnect();
+    };
   }, [sessionId]);
 
   const getOverallStatus = (items) => {

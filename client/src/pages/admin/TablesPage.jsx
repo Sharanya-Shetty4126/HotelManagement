@@ -54,15 +54,28 @@ const TablesPage = () => {
     fetchTables();
 
     const socketUrl = getSocketUrl();
-    const socket = io(socketUrl);
-    socket.emit("join-admin");
+    const socket = io(socketUrl, {
+      transports: ["websocket", "polling"],
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 1000,
+    });
+
+    const joinAdmin = () => socket.emit("join-admin");
+    socket.on("connect", joinAdmin);
+    if (socket.connected) joinAdmin();
 
     socket.on("session-started", () => fetchTables());
     socket.on("bill-notification", () => fetchTables());
     socket.on("payment-confirmed", () => fetchTables());
     socket.on("table-updated", () => fetchTables());
 
-    return () => socket.disconnect();
+    const interval = setInterval(fetchTables, 15000);
+
+    return () => {
+      clearInterval(interval);
+      socket.disconnect();
+    };
   }, []);
 
   const openAddModal = () => {

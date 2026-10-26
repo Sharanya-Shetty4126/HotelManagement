@@ -431,11 +431,6 @@ export function LanguageProvider({ children }) {
   const toggleLanguage = () => {
     const nextLang = language === "en" ? "kn" : "en";
     setLanguage(nextLang);
-    if (nextLang === "kn") {
-      speakText("ಕನ್ನಡ ಭಾಷೆ ಆಯ್ಕೆಯಾಗಿದೆ", "kn");
-    } else {
-      speakText("English language selected", "en");
-    }
   };
 
   const t = (key) => {

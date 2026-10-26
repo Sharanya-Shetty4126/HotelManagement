@@ -40,14 +40,27 @@ const OrdersPage = () => {
     loadOrders();
 
     const socketUrl = getSocketUrl();
-    const socket = io(socketUrl);
-    socket.emit("join-admin");
+    const socket = io(socketUrl, {
+      transports: ["websocket", "polling"],
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 1000,
+    });
+
+    const joinAdmin = () => socket.emit("join-admin");
+    socket.on("connect", joinAdmin);
+    if (socket.connected) joinAdmin();
 
     socket.on("order-notification", () => loadOrders());
     socket.on("order-update", () => loadOrders());
     socket.on("order-cancelled", () => loadOrders());
 
-    return () => socket.disconnect();
+    const interval = setInterval(loadOrders, 12000);
+
+    return () => {
+      clearInterval(interval);
+      socket.disconnect();
+    };
   }, []);
 
   const handleItemStatusChange = async (order, itemId, status) => {

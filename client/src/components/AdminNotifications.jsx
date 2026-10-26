@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Bell, Check, X, Coffee, Receipt, ShoppingBag, Sparkles, AlertCircle, Volume2 } from "lucide-react";
 import { io } from "socket.io-client";
-import { resolveCustomerRequest, getSocketUrl } from "../services/api";
+import { resolveCustomerRequest, getAllRequests, getSocketUrl } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -72,10 +72,58 @@ export default function AdminNotifications() {
     langRef.current = language;
   }, [language]);
 
+  // Fetch active unresolved service requests on mount and periodically
+  const syncActiveRequests = async () => {
+    try {
+      const data = await getAllRequests();
+      if (Array.isArray(data)) {
+        const isKn = langRef.current === "kn";
+        const unhandled = data
+          .filter((r) => !r.resolved)
+          .map((r) => {
+            const tableNum = r.session?.table?.number || "N/A";
+            return {
+              id: `req-${r.id}`,
+              requestId: r.id,
+              type: "request",
+              title: isKn ? `ಟೇಬಲ್ ${tableNum}: ಸಹಾಯದ ವಿನಂತಿ` : `Table ${tableNum}: ${r.type?.replace("_", " ")}`,
+              subtitle: r.description || (isKn ? "ಗ್ರಾಹಕರಿಗೆ ಸೇವೆ ಬೇಕಾಗಿದೆ" : "Customer needs assistance"),
+              time: new Date(r.raisedAt),
+              sessionId: r.sessionId,
+              read: false,
+            };
+          });
+
+        setNotifications((prev) => {
+          const existingIds = new Set(prev.map((n) => n.id));
+          const toAdd = unhandled.filter((n) => !existingIds.has(n.id));
+          return [...toAdd, ...prev];
+        });
+      }
+    } catch (err) {
+      console.warn("Failed to sync active requests:", err);
+    }
+  };
+
   useEffect(() => {
+    syncActiveRequests();
+
     const socketUrl = getSocketUrl();
-    const socket = io(socketUrl);
-    socket.emit("join-admin");
+    const socket = io(socketUrl, {
+      transports: ["websocket", "polling"],
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 1000,
+    });
+
+    const joinAdmin = () => {
+      socket.emit("join-admin");
+    };
+
+    socket.on("connect", joinAdmin);
+    if (socket.connected) {
+      joinAdmin();
+    }
 
     socket.on("order-notification", (data) => {
       playNotificationChime();
@@ -198,6 +246,9 @@ export default function AdminNotifications() {
       setNotifications((prev) => [notif, ...prev.slice(0, 19)]);
     });
 
+    // 15-second polling fallback so active requests are always synchronized
+    const interval = setInterval(syncActiveRequests, 15000);
+
     // Close panel on click outside
     const handleClickOutside = (e) => {
       if (panelRef.current && !panelRef.current.contains(e.target)) {
@@ -207,6 +258,7 @@ export default function AdminNotifications() {
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
+      clearInterval(interval);
       socket.disconnect();
       document.removeEventListener("mousedown", handleClickOutside);
     };
