@@ -358,19 +358,20 @@ export const CATEGORY_TRANSLATIONS = {
 };
 
 function getApiBaseUrl() {
-  if (import.meta.env.VITE_API_URL) {
-    return `${import.meta.env.VITE_API_URL.replace(/\/$/, "")}/api`;
-  }
   if (typeof window !== "undefined") {
     if (window.location.hostname.includes("onrender.com")) {
       return `${window.location.origin}/api`;
     }
-    if (window.location.hostname.includes("pages.dev") || window.location.protocol === "https:") {
+    if (window.location.hostname.includes("pages.dev") || (window.location.protocol === "https:" && !window.location.hostname.includes("localhost"))) {
       return "https://hotelmanagement-2qak.onrender.com/api";
     }
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
       return `http://${window.location.hostname}:5000/api`;
     }
+  }
+
+  if (import.meta.env.VITE_API_URL && !import.meta.env.VITE_API_URL.includes("localhost")) {
+    return `${import.meta.env.VITE_API_URL.replace(/\/$/, "")}/api`;
   }
   return "http://localhost:5000/api";
 }

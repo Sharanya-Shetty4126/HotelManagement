@@ -2,37 +2,47 @@
 import axios from 'axios';
 
 export function getSocketUrl() {
-  if (import.meta.env.VITE_API_URL) {
-    return import.meta.env.VITE_API_URL;
-  }
   if (typeof window !== "undefined") {
+    // 1. If running on Render, connect to the exact same origin (port 443 HTTPS)
     if (window.location.hostname.includes("onrender.com")) {
       return window.location.origin;
     }
-    if (window.location.hostname.includes("pages.dev") || window.location.protocol === "https:") {
+    // 2. If running on Cloudflare Pages or any HTTPS domain, connect to live Render backend
+    if (window.location.hostname.includes("pages.dev") || (window.location.protocol === "https:" && !window.location.hostname.includes("localhost"))) {
       return "https://hotelmanagement-2qak.onrender.com";
     }
+    // 3. If accessing via local Wi-Fi IP (e.g., 192.168.x.x)
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
       return `http://${window.location.hostname}:5000`;
     }
+  }
+
+  // 4. Fallback for custom VITE_API_URL or local dev
+  if (import.meta.env.VITE_API_URL && !import.meta.env.VITE_API_URL.includes("localhost")) {
+    return import.meta.env.VITE_API_URL;
   }
   return "http://localhost:5000";
 }
 
 const getApiBase = () => {
-  if (import.meta.env.VITE_API_URL) {
-    return `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`;
-  }
   if (typeof window !== "undefined") {
+    // 1. If running on Render, API is served on /api of the same domain
     if (window.location.hostname.includes("onrender.com")) {
       return `${window.location.origin}/api`;
     }
-    if (window.location.hostname.includes("pages.dev") || window.location.protocol === "https:") {
+    // 2. If running on Cloudflare Pages or external HTTPS domain, route to Render API
+    if (window.location.hostname.includes("pages.dev") || (window.location.protocol === "https:" && !window.location.hostname.includes("localhost"))) {
       return "https://hotelmanagement-2qak.onrender.com/api";
     }
+    // 3. If accessing via local Wi-Fi IP (e.g., 192.168.x.x)
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
       return `http://${window.location.hostname}:5000/api`;
     }
+  }
+
+  // 4. Fallback for custom VITE_API_URL or local dev
+  if (import.meta.env.VITE_API_URL && !import.meta.env.VITE_API_URL.includes("localhost")) {
+    return `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`;
   }
   return "http://localhost:5000/api";
 };
