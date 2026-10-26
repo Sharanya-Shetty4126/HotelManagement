@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search, Clock, CheckCircle2, ChefHat, Sparkles, Trash2 } from "lucide-react";
-import { getAllOrders, updateOrderItemStatus, cancelOrder, cancelOrderItem } from "../../services/api";
+import { getAllOrders, updateOrderItemStatus, cancelOrder, cancelOrderItem, getSocketUrl } from "../../services/api";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import OrderStatusBadge from "../../components/OrderStatusBadge";
 import { formatCurrency, getOrderStatus } from "../../utils/format";
@@ -39,7 +39,7 @@ const OrdersPage = () => {
   useEffect(() => {
     loadOrders();
 
-    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const socketUrl = getSocketUrl();
     const socket = io(socketUrl);
     socket.emit("join-admin");
 

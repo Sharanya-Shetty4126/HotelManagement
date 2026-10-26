@@ -1,7 +1,7 @@
 // client/src/pages/customer/BillPage.jsx
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getSessionById, generateBill, payBillOnline } from "../../services/api";
+import { getSessionById, generateBill, payBillOnline, getSocketUrl } from "../../services/api";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { io } from "socket.io-client";
 import { useLanguage } from "../../context/LanguageContext";
@@ -62,7 +62,7 @@ export default function BillPage() {
   useEffect(() => {
     fetchSession();
 
-    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const socketUrl = getSocketUrl();
     const socket = io(socketUrl);
     socket.emit("join-session", sessionId);
 

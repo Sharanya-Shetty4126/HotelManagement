@@ -1,7 +1,7 @@
 // client/src/pages/admin/TableSessionPage.jsx
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getSessionById, updateOrderItemStatus, confirmPayment, generateBill, cancelOrder, cancelOrderItem } from "../../services/api";
+import { getSessionById, updateOrderItemStatus, confirmPayment, generateBill, cancelOrder, cancelOrderItem, getSocketUrl } from "../../services/api";
 import { formatCurrency } from "../../utils/format";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { ArrowLeft, CheckCircle2, Clock, Receipt, UserCheck, Trash2 } from "lucide-react";
@@ -36,7 +36,7 @@ export default function TableSessionPage() {
     setLoading(true);
     fetchSession();
 
-    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const socketUrl = getSocketUrl();
     const socket = io(socketUrl);
     socket.emit("join-admin");
     socket.emit("join-session", sessionId);

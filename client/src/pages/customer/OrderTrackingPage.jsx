@@ -1,7 +1,7 @@
 // client/src/pages/customer/OrderTrackingPage.jsx
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { getSessionById } from "../../services/api";
+import { getSessionById, getSocketUrl } from "../../services/api";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import io from "socket.io-client";
 import { Clock, CheckCircle2, ArrowLeft } from "lucide-react";
@@ -28,7 +28,7 @@ export default function OrderTrackingPage() {
     fetchOrders();
 
     // Real-time updates via Socket.io
-    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const socketUrl = getSocketUrl();
     const newSocket = io(socketUrl);
     newSocket.emit("join-session", sessionId);
 

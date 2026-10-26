@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Bell, Check, X, Coffee, Receipt, ShoppingBag, Sparkles, AlertCircle, Volume2 } from "lucide-react";
 import { io } from "socket.io-client";
-import { resolveCustomerRequest } from "../services/api";
+import { resolveCustomerRequest, getSocketUrl } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -73,7 +73,7 @@ export default function AdminNotifications() {
   }, [language]);
 
   useEffect(() => {
-    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const socketUrl = getSocketUrl();
     const socket = io(socketUrl);
     socket.emit("join-admin");
 

@@ -2,19 +2,33 @@
 import axios from 'axios';
 
 export function getSocketUrl() {
-  if (typeof window !== "undefined" && window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
-    return `http://${window.location.hostname}:5000`;
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
   }
-  return import.meta.env.VITE_API_URL || "http://localhost:5000";
+  if (typeof window !== "undefined") {
+    if (window.location.hostname.includes("onrender.com") || window.location.protocol === "https:") {
+      return window.location.origin;
+    }
+    if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
+      return `http://${window.location.hostname}:5000`;
+    }
+  }
+  return "http://localhost:5000";
 }
 
 const getApiBase = () => {
-  if (typeof window !== "undefined" && window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
-    return `http://${window.location.hostname}:5000/api`;
+  if (import.meta.env.VITE_API_URL) {
+    return `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`;
   }
-  return import.meta.env.VITE_API_URL
-    ? `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`
-    : 'http://localhost:5000/api';
+  if (typeof window !== "undefined") {
+    if (window.location.hostname.includes("onrender.com") || window.location.protocol === "https:") {
+      return `${window.location.origin}/api`;
+    }
+    if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
+      return `http://${window.location.hostname}:5000/api`;
+    }
+  }
+  return "http://localhost:5000/api";
 };
 
 const axiosClient = axios.create({

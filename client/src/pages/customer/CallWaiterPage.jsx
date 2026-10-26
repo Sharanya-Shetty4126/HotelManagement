@@ -1,7 +1,7 @@
 // client/src/pages/customer/CallWaiterPage.jsx
 import { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
-import { createCustomerRequest, getSessionRequests } from "../../services/api";
+import { createCustomerRequest, getSessionRequests, getSocketUrl } from "../../services/api";
 import { ArrowLeft, CheckCircle2, Clock, Mic, MicOff, Volume2 } from "lucide-react";
 import { io } from "socket.io-client";
 import { useLanguage } from "../../context/LanguageContext";
@@ -41,7 +41,7 @@ export default function CallWaiterPage() {
   useEffect(() => {
     loadRequests();
 
-    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const socketUrl = getSocketUrl();
     const socket = io(socketUrl);
     socket.emit("join-session", sessionId);
 

@@ -2,6 +2,8 @@
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
+const path = require('path');
+const fs = require('fs');
 const { Server } = require('socket.io');
 const dotenv = require('dotenv');
 
@@ -106,6 +108,33 @@ app.get('/api/health', async (req, res) => {
 app.use('/api/*', (req, res) => {
   res.status(404).json({ error: `API route ${req.originalUrl} not found` });
 });
+
+// Serve frontend SPA (built React app from server/public or client/dist)
+const serverPublicPath = path.join(__dirname, '../public');
+const clientDistPath = path.join(__dirname, '../../client/dist');
+const staticPath = fs.existsSync(serverPublicPath)
+  ? serverPublicPath
+  : (fs.existsSync(clientDistPath) ? clientDistPath : null);
+
+if (staticPath) {
+  app.use(express.static(staticPath));
+  // Any non-API route serves index.html for client-side routing
+  app.get('*', (req, res, next) => {
+    if (req.originalUrl.startsWith('/api') || req.originalUrl.startsWith('/socket.io')) {
+      return next();
+    }
+    res.sendFile(path.join(staticPath, 'index.html'));
+  });
+} else {
+  app.get('/', (req, res) => {
+    res.json({
+      status: 'ok',
+      message: 'Julius Hotel Management API is running. Open /admin or /api/health.',
+      healthCheck: '/api/health',
+      tables: '/api/tables'
+    });
+  });
+}
 
 // Global Error Handler
 app.use((err, req, res, next) => {

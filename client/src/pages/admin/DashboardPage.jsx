@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Users, ClipboardList, Clock, TrendingUp, Bell, Calendar } from "lucide-react";
-import { getDashboardStats } from "../../services/api";
+import { getDashboardStats, getSocketUrl } from "../../services/api";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import OrderStatusBadge from "../../components/OrderStatusBadge";
 import { formatCurrency } from "../../utils/format";
@@ -32,7 +32,7 @@ const DashboardPage = () => {
     loadStats();
 
     // Real-time updates via Socket.io
-    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const socketUrl = getSocketUrl();
     const socket = io(socketUrl);
     socket.emit("join-admin");
 

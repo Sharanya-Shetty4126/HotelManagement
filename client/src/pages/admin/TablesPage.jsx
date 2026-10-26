@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Table2, Plus, Circle, X, Play, QrCode } from "lucide-react";
-import { getTables, createTable, startTableSession } from "../../services/api";
+import { getTables, createTable, startTableSession, getSocketUrl } from "../../services/api";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { io } from "socket.io-client";
 import { useLanguage } from "../../context/LanguageContext";
@@ -49,7 +49,7 @@ const TablesPage = () => {
   useEffect(() => {
     fetchTables();
 
-    const socketUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+    const socketUrl = getSocketUrl();
     const socket = io(socketUrl);
     socket.emit("join-admin");
 
