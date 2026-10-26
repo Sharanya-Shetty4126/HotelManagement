@@ -63,7 +63,13 @@ router.get('/', async (req, res) => {
     res.json(tablesWithStatus);
   } catch (error) {
     console.error('Get tables error:', error);
-    res.status(500).json({ error: 'Failed to fetch tables' });
+    res.status(500).json({ 
+      error: 'Failed to fetch tables',
+      message: error.message,
+      code: error.code,
+      hasDbUrl: Boolean(process.env.DATABASE_URL),
+      hasDirectUrl: Boolean(process.env.DIRECT_URL)
+    });
   }
 });
 

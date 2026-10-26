@@ -75,13 +75,31 @@ app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/requests', requestRoutes);
 app.use('/api/tts', ttsRoutes);
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
-  res.json({
-    status: 'ok',
-    message: 'Hotel Management API is running smoothly',
-    timestamp: new Date().toISOString()
-  });
+// Health check endpoint with live DB diagnostic
+app.get('/api/health', async (req, res) => {
+  try {
+    const { PrismaClient } = require('@prisma/client');
+    const prisma = new PrismaClient();
+    await prisma.$queryRaw`SELECT 1`;
+    res.json({
+      status: 'ok',
+      database: 'connected',
+      message: 'Hotel Management API & Database are running smoothly',
+      hasDbUrl: Boolean(process.env.DATABASE_URL),
+      hasDirectUrl: Boolean(process.env.DIRECT_URL),
+      timestamp: new Date().toISOString()
+    });
+  } catch (dbErr) {
+    console.error('Health check DB error:', dbErr.message);
+    res.status(500).json({
+      status: 'database_error',
+      message: dbErr.message,
+      code: dbErr.code,
+      hasDbUrl: Boolean(process.env.DATABASE_URL),
+      hasDirectUrl: Boolean(process.env.DIRECT_URL),
+      timestamp: new Date().toISOString()
+    });
+  }
 });
 
 // 404 handler for undefined API routes
