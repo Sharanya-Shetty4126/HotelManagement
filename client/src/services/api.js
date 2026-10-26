@@ -6,8 +6,11 @@ export function getSocketUrl() {
     return import.meta.env.VITE_API_URL;
   }
   if (typeof window !== "undefined") {
-    if (window.location.hostname.includes("onrender.com") || window.location.protocol === "https:") {
+    if (window.location.hostname.includes("onrender.com")) {
       return window.location.origin;
+    }
+    if (window.location.hostname.includes("pages.dev") || window.location.protocol === "https:") {
+      return "https://hotelmanagement-2qak.onrender.com";
     }
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
       return `http://${window.location.hostname}:5000`;
@@ -21,8 +24,11 @@ const getApiBase = () => {
     return `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`;
   }
   if (typeof window !== "undefined") {
-    if (window.location.hostname.includes("onrender.com") || window.location.protocol === "https:") {
+    if (window.location.hostname.includes("onrender.com")) {
       return `${window.location.origin}/api`;
+    }
+    if (window.location.hostname.includes("pages.dev") || window.location.protocol === "https:") {
+      return "https://hotelmanagement-2qak.onrender.com/api";
     }
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
       return `http://${window.location.hostname}:5000/api`;

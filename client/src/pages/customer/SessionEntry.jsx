@@ -51,7 +51,9 @@ export default function SessionEntry() {
         state: { sessionCode: response.sessionCode, newSession: true } 
       });
     } catch (err) {
-      setError('Failed to create session. Please try again.');
+      console.error('Create session error:', err);
+      const msg = err.response?.data?.error || err.message || 'Failed to create session. Please try again.';
+      setError(msg);
     } finally {
       setCreating(false);
     }
@@ -65,7 +67,9 @@ export default function SessionEntry() {
       const response = await joinSession(qrToken, joinCode);
       navigate(`/session/${response.sessionId}/menu`);
     } catch (err) {
-      setError('Invalid session code. Please try again.');
+      console.error('Join session error:', err);
+      const msg = err.response?.data?.error || err.message || 'Invalid session code. Please try again.';
+      setError(msg);
       setJoining(false);
     }
   };
