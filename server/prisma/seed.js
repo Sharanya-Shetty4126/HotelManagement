@@ -79,12 +79,12 @@ async function main() {
   const qrSecret = process.env.QR_SECRET || 'hotel-management-qr-secret-key-2026';
 
   // --- Admin ---
-  const passwordHash = await bcrypt.hash('julius@R^2U', 10);
+  const passwordHash = await bcrypt.hash('admin123', 10);
   await prisma.admin.upsert({
-    where: { username: 'juliusHonnavarHotel' },
+    where: { username: 'admin' },
     update: { passwordHash: passwordHash },
     create: {
-      username: 'juliusHonnavarHotel',
+      username: 'admin',
       passwordHash: passwordHash,
       name: 'Julius Restaurant Manager'
     }

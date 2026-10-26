@@ -315,20 +315,20 @@ export default function MenuPage() {
         )}
       </div>
 
-      {/* Cart Bottom Bar */}
+      {/* Cart Bottom Bar (floats directly above mobile bottom bar) */}
       {itemCount > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-julius-sand shadow-lg p-3.5 z-20">
-          <div className="max-w-3xl mx-auto flex items-center justify-between">
+        <div className="fixed bottom-12 sm:bottom-0 left-0 right-0 bg-julius-teal text-white shadow-2xl p-3 z-30 sm:z-20 border-t border-julius-gold/30">
+          <div className="max-w-3xl mx-auto flex items-center justify-between px-2">
             <div>
-              <span className="font-bold text-gray-900 text-sm">{itemCount} {t("items")}</span>
-              <span className="text-sm font-bold text-julius-teal ml-3">
+              <span className="font-bold text-white text-sm">{itemCount} {t("items")}</span>
+              <span className="text-sm font-bold text-julius-gold ml-3">
                 ₹{subtotal}
               </span>
             </div>
 
             <Link
               to={`/session/${sessionId}/cart`}
-              className="px-5 py-2 bg-julius-teal text-white text-xs font-bold rounded-xl hover:bg-julius-teal-light transition-colors shadow-sm flex items-center gap-1.5"
+              className="px-5 py-2 bg-julius-gold text-julius-charcoal text-xs font-bold rounded-xl hover:bg-yellow-400 transition-colors shadow-sm flex items-center gap-1.5"
             >
               <span>{t("viewCart")}</span>
               <span>→</span>
