@@ -12,10 +12,18 @@ router.get('/', async (req, res) => {
   try {
     const categories = await prisma.menuCategory.findMany({
       orderBy: { displayOrder: 'asc' },
-      include: { items: { where: { available: true } } }
+      include: {
+        items: {
+          where: { available: true },
+          orderBy: { id: 'asc' }
+        }
+      }
     });
 
-    const items = categories.flatMap((category) =>
+    // Only include categories that currently have available items
+    const activeCategories = categories.filter((c) => c.items.length > 0);
+
+    const items = activeCategories.flatMap((category) =>
       category.items.map((item) => ({
         id: item.id,
         name: item.name,
@@ -23,6 +31,7 @@ router.get('/', async (req, res) => {
         price: item.price,
         description: item.description,
         emoji: item.emoji,
+        imageUrl: item.imageUrl || null,
         isVeg: item.isVeg,
         rating: item.rating
       }))
@@ -30,7 +39,7 @@ router.get('/', async (req, res) => {
 
     res.json({
       items,
-      categories: categories.map((c) => c.name)
+      categories: activeCategories.map((c) => c.name)
     });
   } catch (error) {
     console.error('Get menu error:', error);

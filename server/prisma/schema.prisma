@@ -66,6 +66,7 @@ model MenuItem {
   description   String?
   price         Float
   emoji         String       @default("🍽️")
+  imageUrl      String?
   isVeg         Boolean      @default(true)
   rating        Float        @default(0)
   available     Boolean      @default(true)

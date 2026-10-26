@@ -350,11 +350,22 @@ export const ITEM_TRANSLATIONS = {
 };
 
 export const CATEGORY_TRANSLATIONS = {
+  "Side Dish / Snack": "ಸೈಡ್ ಡಿಶ್ / ಸ್ನ್ಯಾಕ್ಸ್",
+  "Soups": "ಸೂಪ್ಸ್",
+  "Chinese Starters": "ಚೈನೀಸ್ ಸ್ಟಾರ್ಟರ್ಸ್",
+  "Tandoor Starters": "ತಂದೂರ್ ಸ್ಟಾರ್ಟರ್ಸ್",
+  "Egg Dishes": "ಮೊಟ್ಟೆ ಖಾದ್ಯಗಳು",
+  "Seafood Specials": "ಕರಾವಳಿ ಸೀಫುಡ್ ಸ್ಪೆಷಲ್ಸ್",
+  "Indian Gravies": "ಇಂಡಿಯನ್ ಗ್ರೇವಿಗಳು",
+  "Indian Breads": "ರೊಟ್ಟಿ / ನಾನ್ / ಪರೋಟ",
+  "Chinese Rice & Noodles": "ಚೈನೀಸ್ ರೈಸ್ & ನೂಡಲ್ಸ್",
+  "Biryani & Indian Rice": "ಬಿರಿಯಾನಿ & ರೈಸ್",
+  "Julius Bar & Beverages": "ಜ್ಯೂಲಿಯಸ್ ಬಾರ್ & ಪಾನೀಯಗಳು",
+  "Desserts": "ಸಿಹಿ ತಿನಿಸುಗಳು / ಡೆಸರ್ಟ್ಸ್",
   "Coastal Starters & Fries": "ಕರಾವಳಿ ಸ್ಟಾರ್ಟರ್ಸ್ & ಫ್ರೈಸ್",
   "Coastal Mains & Curries": "ಕರಾವಳಿ ಮುಖ್ಯ ಊಟ & ಸಾರು",
   "Coastal Breads & Rice": "ದೋಸೆ, ರೊಟ್ಟಿ & ಅನ್ನ",
-  "Julius Bar & Beverages": "ಜ್ಯೂಲಿಯಸ್ ಬಾರ್ & ಪಾನೀಯಗಳು",
-  "Desserts": "ಸಿಹಿ ತಿನಿಸುಗಳು / ಡೆಸರ್ಟ್ಸ್"
+  "All": "ಎಲ್ಲವೂ"
 };
 
 function getApiBaseUrl() {
