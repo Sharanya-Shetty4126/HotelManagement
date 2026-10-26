@@ -1,7 +1,7 @@
 // client/src/pages/admin/TablesPage.jsx
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Table2, Plus, Circle, X, Play, QrCode } from "lucide-react";
+import { Table2, Plus, Circle, X, Play, QrCode, Download, ExternalLink, Copy, Check } from "lucide-react";
 import { getTables, createTable, startTableSession, getSocketUrl } from "../../services/api";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { io } from "socket.io-client";
@@ -34,6 +34,10 @@ const TablesPage = () => {
   // Start Session Modal for walk-ins
   const [seatingTable, setSeatingTable] = useState(null);
   const [guestCount, setGuestCount] = useState(2);
+
+  // QR Code Modal
+  const [qrModalTable, setQrModalTable] = useState(null);
+  const [copied, setCopied] = useState(false);
 
   const fetchTables = async () => {
     try {
@@ -223,15 +227,24 @@ const TablesPage = () => {
                 )}
 
                 {table.qrToken && (
-                  <a
-                    href={`/table/${table.qrToken}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs text-center text-gray-400 hover:text-blue-600 flex items-center justify-center gap-1 py-1"
-                  >
-                    <QrCode size={12} />
-                    {language === "kn" ? "ಗ್ರಾಹಕರ QR ಲಿಂಕ್ ಪೂರ್ವವೀಕ್ಷಣೆ" : "Preview Customer QR Link"}
-                  </a>
+                  <div className="flex items-center gap-1.5 pt-1">
+                    <button
+                      onClick={() => { setQrModalTable(table); setCopied(false); }}
+                      className="flex-1 py-1.5 px-2 bg-slate-50 hover:bg-blue-50 text-slate-700 hover:text-blue-700 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors border border-slate-200 hover:border-blue-200"
+                    >
+                      <QrCode size={13} className="text-blue-600" />
+                      {language === "kn" ? "QR ಕೋಡ್ ನೋಡಿ" : "View QR Code"}
+                    </button>
+                    <a
+                      href={`/table/${table.qrToken}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-1.5 bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-800 rounded-lg border border-slate-200 transition-colors"
+                      title={language === "kn" ? "ಗ್ರಾಹಕರ ಲಿಂಕ್ ತೆರೆಯಿರಿ" : "Open customer landing page"}
+                    >
+                      <ExternalLink size={13} />
+                    </a>
+                  </div>
                 )}
               </div>
             </div>
@@ -382,6 +395,87 @@ const TablesPage = () => {
                   ? (language === "kn" ? "ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ..." : "Seating...")
                   : (language === "kn" ? "ಸೆಷನ್ ಪ್ರಾರಂಭಿಸಿ" : "Start Session")}
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* View QR Code Modal */}
+      {qrModalTable && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl relative animate-in fade-in zoom-in-95 text-center">
+            <button
+              onClick={() => setQrModalTable(null)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+            >
+              <X size={20} />
+            </button>
+
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 mb-3">
+              <QrCode size={24} />
+            </div>
+
+            <h3 className="text-xl font-bold text-gray-900">
+              {language === "kn" ? `ಟೇಬಲ್ ${qrModalTable.number} QR ಕೋಡ್` : `Table ${qrModalTable.number} QR Code`}
+            </h3>
+            <p className="text-xs text-gray-500 mt-1 mb-4">
+              {qrModalTable.section} · {qrModalTable.capacity} {language === "kn" ? "ಜನರ ಸಾಮರ್ಥ್ಯ" : "Persons"}
+            </p>
+
+            {/* QR Code Image */}
+            <div className="p-3 bg-white border-2 border-slate-100 rounded-2xl shadow-inner inline-block mb-4">
+              <img
+                src={`/qr-codes/table-${qrModalTable.number}.png`}
+                alt={`Table ${qrModalTable.number} QR Code`}
+                className="w-56 h-56 object-contain rounded-lg"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  const targetUrl = `${window.location.origin}/table/${qrModalTable.qrToken}`;
+                  e.target.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(targetUrl)}`;
+                }}
+              />
+            </div>
+
+            <p className="text-xs text-slate-400 mb-4 px-2">
+              {language === "kn"
+                ? "ಗ್ರಾಹಕರು ತಮ್ಮ ಮೊಬೈಲ್ ಕ್ಯಾಮೆರಾದಿಂದ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಮೆನು ವೀಕ್ಷಿಸಬಹುದು."
+                : "Guests can scan this from their phone camera to open the menu and place orders."}
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col gap-2">
+              <div className="flex gap-2">
+                <a
+                  href={`/qr-codes/table-${qrModalTable.number}.png`}
+                  download={`table-${qrModalTable.number}-qr.png`}
+                  className="flex-1 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold flex items-center justify-center gap-1.5 transition-colors shadow-sm"
+                >
+                  <Download size={15} />
+                  {language === "kn" ? "ಡೌನ್‌ಲೋಡ್" : "Download PNG"}
+                </a>
+                <button
+                  onClick={() => {
+                    const targetUrl = `${window.location.origin}/table/${qrModalTable.qrToken}`;
+                    navigator.clipboard.writeText(targetUrl);
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  }}
+                  className="flex-1 py-2 px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-sm font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                >
+                  {copied ? <Check size={15} className="text-emerald-600" /> : <Copy size={15} />}
+                  {copied ? (language === "kn" ? "ಕಾಪಿ ಆಗಿದೆ!" : "Copied!") : (language === "kn" ? "ಲಿಂಕ್ ಕಾಪಿ" : "Copy Link")}
+                </button>
+              </div>
+
+              <a
+                href={`/table/${qrModalTable.qrToken}`}
+                target="_blank"
+                rel="noreferrer"
+                className="py-2 px-3 text-xs text-blue-600 hover:text-blue-800 hover:underline flex items-center justify-center gap-1"
+              >
+                <ExternalLink size={12} />
+                {language === "kn" ? "ಗ್ರಾಹಕನಾಗಿ ಈ ಪುಟವನ್ನು ಹೊಸ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ತೆರೆಯಿರಿ" : "Test as Guest in New Tab"}
+              </a>
             </div>
           </div>
         </div>

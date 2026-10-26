@@ -5,10 +5,8 @@ const QRCode = require('qrcode');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-// ⚠️ Change this to your actual frontend URL
-// For local network testing:
-const BASE_URL =  "https://hotelmanagement-15m.pages.dev";  // <-- your IP here
-// For deployment: 'https://yourdomain.com'
+// Live Render deployment URL or custom BASE_URL
+const BASE_URL = process.env.BASE_URL || "https://hotelmanagement-2qak.onrender.com";
 
 async function generateQRCodes() {
   try {
@@ -17,13 +15,18 @@ async function generateQRCodes() {
     });
 
     const outputDir = path.join(__dirname, '../../qr-codes');
+    const publicDir = path.join(__dirname, '../public/qr-codes');
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
+    }
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
     }
 
     for (const table of tables) {
       const url = `${BASE_URL}/table/${table.qrToken}`;
       const filePath = path.join(outputDir, `table-${table.number}.png`);
+      const publicFilePath = path.join(publicDir, `table-${table.number}.png`);
 
       await QRCode.toFile(filePath, url, {
         width: 300,
@@ -31,10 +34,13 @@ async function generateQRCodes() {
         color: { dark: '#000000', light: '#ffffff' }
       });
 
+      // Also copy to public directory for direct download/viewing in web app
+      fs.copyFileSync(filePath, publicFilePath);
+
       console.log(`✅ Table ${table.number}: ${url}`);
     }
 
-    console.log(`\n📁 QR codes saved in: ${outputDir}`);
+    console.log(`\n📁 QR codes saved in: ${outputDir} and ${publicDir}`);
   } catch (error) {
     console.error('Error generating QR codes:', error);
   } finally {

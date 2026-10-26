@@ -79,14 +79,14 @@ async function main() {
   const qrSecret = process.env.QR_SECRET || 'hotel-management-qr-secret-key-2026';
 
   // --- Admin ---
-  const passwordHash = await bcrypt.hash('admin123', 10);
+  const passwordHash = await bcrypt.hash('julius@R^2U', 10);
   await prisma.admin.upsert({
-    where: { username: 'admin' },
+    where: { username: 'juliusHonnavarHotel' },
     update: { passwordHash: passwordHash },
-    create: { 
-      username: 'admin', 
+    create: {
+      username: 'juliusHonnavarHotel',
       passwordHash: passwordHash,
-      name: 'Julius Restaurant Manager' 
+      name: 'Julius Restaurant Manager'
     }
   });
   console.log('✅ Seeded admin login -> username: admin / password: admin123');
@@ -96,18 +96,18 @@ async function main() {
     const table = await prisma.table.upsert({
       where: { number: t.number },
       update: { section: t.section, capacity: t.capacity },
-      create: { 
-        number: t.number, 
-        section: t.section, 
-        capacity: t.capacity, 
-        qrToken: `pending-${t.number}` 
+      create: {
+        number: t.number,
+        section: t.section,
+        capacity: t.capacity,
+        qrToken: `pending-${t.number}`
       }
     });
 
     const qrToken = jwt.sign({ tableId: table.id }, qrSecret);
-    await prisma.table.update({ 
-      where: { id: table.id }, 
-      data: { qrToken } 
+    await prisma.table.update({
+      where: { id: table.id },
+      data: { qrToken }
     });
     console.log(`✅ Table ${t.number} (${t.section}): /table/${qrToken}`);
   }
