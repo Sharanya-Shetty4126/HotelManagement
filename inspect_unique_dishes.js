@@ -16,3 +16,4 @@ console.log(`Found ${uniques.length} completely unique dish images:`);
 uniques.forEach(([h, list], i) => {
   console.log(`  ${i+1}. ${list[0]}`);
 });
+

@@ -80,3 +80,4 @@ for (const [cat, list] of Object.entries(byCat)) {
   console.log(`\n=== Category: ${cat} (${list.length} items needing authentic photos) ===`);
   list.forEach(name => console.log(`  - ${name}`));
 }
+

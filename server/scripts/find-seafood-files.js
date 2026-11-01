@@ -81,3 +81,4 @@ async function run() {
   fs.writeFileSync('server/scripts/seafood_found.json', JSON.stringify(mapping, null, 2));
 }
 run();
+

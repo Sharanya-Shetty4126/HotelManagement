@@ -40,3 +40,4 @@ additional.forEach(a => {
 
 console.log(`Total slugs requiring unique dish photography: ${slugsToReplace.length}`);
 fs.writeFileSync('server/scripts/slugs-to-replace.json', JSON.stringify(slugsToReplace, null, 2));
+

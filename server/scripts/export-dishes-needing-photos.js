@@ -56,3 +56,4 @@ active.forEach(item => {
 
 fs.writeFileSync('server/scripts/dishes_needing_photos.json', JSON.stringify(needUniquePhoto, null, 2));
 console.log(`Exported ${needUniquePhoto.length} items to server/scripts/dishes_needing_photos.json`);
+
