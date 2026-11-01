@@ -1,11 +1,31 @@
 import Card from "./Card";
 import Button from "./Button";
 import { formatCurrency } from "../utils/format";
+import { getDishImage, CATEGORY_FALLBACK_IMAGES } from "../utils/dishImages";
 
 function MenuItemCard({ item, onAdd }) {
+  const displayImage = getDishImage(item);
+  const fallbackImage = CATEGORY_FALLBACK_IMAGES[item.category] || CATEGORY_FALLBACK_IMAGES.default;
+
   return (
-    <Card className="flex gap-4">
-      <span className="text-3xl leading-none">{item.emoji}</span>
+    <Card className="flex gap-4 items-center">
+      <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-gray-100 border border-gray-200">
+        <img
+          src={displayImage}
+          alt={item.name}
+          loading="lazy"
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = fallbackImage;
+          }}
+          className="w-full h-full object-cover"
+        />
+        {item.emoji && (
+          <span className="absolute top-1 left-1 bg-white/80 backdrop-blur-xs rounded-full p-0.5 text-xs shadow-xs">
+            {item.emoji}
+          </span>
+        )}
+      </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-start justify-between gap-2">
           <div>
@@ -19,7 +39,7 @@ function MenuItemCard({ item, onAdd }) {
               </span>
               <h3 className="font-medium text-gray-900">{item.name}</h3>
             </div>
-            <p className="text-sm text-gray-500 mt-1">{item.description}</p>
+            <p className="text-sm text-gray-500 mt-1 line-clamp-2">{item.description}</p>
           </div>
         </div>
         <div className="flex items-center justify-between mt-3">

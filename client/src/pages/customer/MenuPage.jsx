@@ -6,23 +6,7 @@ import { getMenu } from "../../services/api";
 import { useCart } from "../../context/CartContext";
 import { useLanguage } from "../../context/LanguageContext";
 import LoadingSpinner from "../../components/LoadingSpinner";
-
-// Mouth-watering category default food photography
-const CATEGORY_FALLBACK_IMAGES = {
-  "Side Dish / Snack": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&auto=format&fit=crop&q=80",
-  "Soups": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&auto=format&fit=crop&q=80",
-  "Chinese Starters": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&auto=format&fit=crop&q=80",
-  "Tandoor Starters": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600&auto=format&fit=crop&q=80",
-  "Egg Dishes": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&auto=format&fit=crop&q=80",
-  "Seafood Specials": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=80",
-  "Indian Gravies": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&auto=format&fit=crop&q=80",
-  "Indian Breads": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600&auto=format&fit=crop&q=80",
-  "Chinese Rice & Noodles": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&auto=format&fit=crop&q=80",
-  "Biryani & Indian Rice": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&auto=format&fit=crop&q=80",
-  "Julius Bar & Beverages": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&auto=format&fit=crop&q=80",
-  "Desserts": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&auto=format&fit=crop&q=80",
-  default: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80"
-};
+import { getDishImage, CATEGORY_FALLBACK_IMAGES } from "../../utils/dishImages";
 
 const CATEGORY_ICONS = {
   "Side Dish / Snack": "🫓",
@@ -364,7 +348,7 @@ export default function MenuPage() {
         {filteredItems.map((item) => {
           const qty = quantityOf(item.id);
           const fallbackImage = CATEGORY_FALLBACK_IMAGES[item.category] || CATEGORY_FALLBACK_IMAGES.default;
-          const displayImage = item.imageUrl || fallbackImage;
+          const displayImage = getDishImage(item);
 
           return (
             <div

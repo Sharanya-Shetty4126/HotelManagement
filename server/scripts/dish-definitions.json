@@ -1,0 +1,3314 @@
+[
+  {
+    "slug": "gulab_jamun",
+    "name": "Gulab Jamun",
+    "category": "Desserts",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Gulab jamun dessert",
+      "Gulab jamun"
+    ]
+  },
+  {
+    "slug": "honnavar_gadbad",
+    "name": "Honnavar Gadbad",
+    "category": "Desserts",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Gadbad ice cream",
+      "Gadbad dessert"
+    ]
+  },
+  {
+    "slug": "elaneer_payasam",
+    "name": "Elaneer Payasam",
+    "category": "Desserts",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Elaneer payasam",
+      "Tender coconut payasam",
+      "Payasam kheer"
+    ]
+  },
+  {
+    "slug": "honnavar_special_gadbad",
+    "name": "Honnavar Special Gadbad",
+    "category": "Desserts",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Gadbad ice cream",
+      "Gadbad sundae"
+    ]
+  },
+  {
+    "slug": "gulab_jamun_with_ice_cream",
+    "name": "Gulab Jamun with Ice Cream",
+    "category": "Desserts",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Gulab jamun with ice cream",
+      "Gulab jamun dessert"
+    ]
+  },
+  {
+    "slug": "sizzling_brownie_with_vanilla",
+    "name": "Sizzling Brownie with Vanilla",
+    "category": "Desserts",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Brownie with ice cream",
+      "Chocolate brownie ice cream",
+      "Chocolate brownie"
+    ]
+  },
+  {
+    "slug": "honnavar_toddy_punch",
+    "name": "Honnavar Toddy Punch",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tropical fruit punch cocktail",
+      "Fruit punch mocktail"
+    ]
+  },
+  {
+    "slug": "kokum_sol_kadi_fizz",
+    "name": "Kokum Sol Kadi Fizz",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Solkadhi",
+      "Sol kadi drink"
+    ]
+  },
+  {
+    "slug": "alphonso_mango_mule",
+    "name": "Alphonso Mango Mule",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mango juice glass",
+      "Mango smoothie beverage"
+    ]
+  },
+  {
+    "slug": "fresh_tender_coconut_elaneer",
+    "name": "Fresh Tender Coconut (Elaneer)",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tender coconut with straw",
+      "Green coconut water"
+    ]
+  },
+  {
+    "slug": "fresh_lime_soda",
+    "name": "Fresh Lime Soda (Sweet / Salt)",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Fresh lime soda",
+      "Nimbu soda drink"
+    ]
+  },
+  {
+    "slug": "cold_soft_drinks",
+    "name": "Cold Soft Drinks (330ml)",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Glass of cola with ice",
+      "Cola soft drink glass"
+    ]
+  },
+  {
+    "slug": "mineral_water",
+    "name": "Mineral Water (1 Litre)",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mineral water bottle glass",
+      "Glass of water"
+    ]
+  },
+  {
+    "slug": "roasted_papad",
+    "name": "Roasted Papad",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Roasted papad",
+      "Papadum"
+    ]
+  },
+  {
+    "slug": "oil_papad",
+    "name": "Oil Papad",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Fried papad",
+      "Papad fry"
+    ]
+  },
+  {
+    "slug": "chilli_fry",
+    "name": "Chilli Fry",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Fried green chillies",
+      "Mirchi fry"
+    ]
+  },
+  {
+    "slug": "masala_papad",
+    "name": "Masala Papad",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": "/images/dishes/masala_papad.png",
+    "queries": [
+      "Masala papad"
+    ]
+  },
+  {
+    "slug": "raja_masala",
+    "name": "Raja Masala",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Masala peanuts chaat",
+      "Spiced peanuts"
+    ]
+  },
+  {
+    "slug": "finger_chips",
+    "name": "Finger Chips",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "French fries",
+      "Golden french fries"
+    ]
+  },
+  {
+    "slug": "aloo_chat",
+    "name": "Aloo Chat",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Aloo chaat spicy potato",
+      "Aloo chaat"
+    ]
+  },
+  {
+    "slug": "g_p_dry",
+    "name": "G.P. Dry",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Green peas masala dry",
+      "Green peas fry"
+    ]
+  },
+  {
+    "slug": "garlic_dry",
+    "name": "Garlic Dry",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Fried garlic cloves",
+      "Roasted garlic"
+    ]
+  },
+  {
+    "slug": "shenga_boiled",
+    "name": "Shenga Boiled",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": "/images/dishes/boiled_peanut_chaat.png",
+    "queries": [
+      "Boiled peanuts chaat",
+      "Boiled groundnuts"
+    ]
+  },
+  {
+    "slug": "shenga_dry",
+    "name": "Shenga Dry",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Roasted salted peanuts",
+      "Roasted groundnuts"
+    ]
+  },
+  {
+    "slug": "veg_clear_soup",
+    "name": "Veg Clear Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable clear soup broth",
+      "Clear soup"
+    ]
+  },
+  {
+    "slug": "veg_hot_sour_soup",
+    "name": "Veg Hot & Sour Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Hot and sour soup vegetable",
+      "Hot and sour soup"
+    ]
+  },
+  {
+    "slug": "veg_manchow_soup",
+    "name": "Veg Manchow Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "existingLocal": "/images/dishes/veg_manchow_soup.png",
+    "queries": [
+      "Vegetable manchow soup",
+      "Manchow soup"
+    ]
+  },
+  {
+    "slug": "veg_noodle_soup",
+    "name": "Veg Noodle Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable noodle soup",
+      "Noodle soup bowl"
+    ]
+  },
+  {
+    "slug": "palak_soup",
+    "name": "Palak Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Cream of spinach soup palak",
+      "Spinach soup"
+    ]
+  },
+  {
+    "slug": "cream_of_tomato_soup",
+    "name": "Cream of Tomato Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Cream of tomato soup bowl",
+      "Tomato soup"
+    ]
+  },
+  {
+    "slug": "cream_of_veg_soup",
+    "name": "Cream of Veg Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Cream of vegetable soup bowl",
+      "Vegetable cream soup"
+    ]
+  },
+  {
+    "slug": "veg_sweet_corn_soup",
+    "name": "Veg Sweet Corn Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Sweet corn vegetable soup",
+      "Sweet corn soup"
+    ]
+  },
+  {
+    "slug": "chicken_hot_sour_soup",
+    "name": "Chicken Hot & Sour Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken hot and sour soup",
+      "Hot and sour soup chicken"
+    ]
+  },
+  {
+    "slug": "chicken_lung_fung_soup",
+    "name": "Chicken Lung Fung Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chinese chicken mushroom soup",
+      "Egg drop chicken soup"
+    ]
+  },
+  {
+    "slug": "chicken_clear_soup",
+    "name": "Chicken Clear Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Clear chicken soup broth",
+      "Chicken broth soup"
+    ]
+  },
+  {
+    "slug": "chicken_manchow_soup",
+    "name": "Chicken Manchow Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken manchow soup bowl",
+      "Manchow soup"
+    ]
+  },
+  {
+    "slug": "chicken_noodle_soup",
+    "name": "Chicken Noodle Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken noodle soup bowl",
+      "Chicken noodle soup"
+    ]
+  },
+  {
+    "slug": "mutton_manchow_soup",
+    "name": "Mutton Manchow Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton soup broth",
+      "Mutton bone soup"
+    ]
+  },
+  {
+    "slug": "onion_pakoda",
+    "name": "Onion Pakoda",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Onion pakoda",
+      "Kanda bhaji onion fritters"
+    ]
+  },
+  {
+    "slug": "ring_onion_pakoda",
+    "name": "Ring Onion Pakoda",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Crispy onion rings",
+      "Batter fried onion rings"
+    ]
+  },
+  {
+    "slug": "veg_pakoda",
+    "name": "Veg Pakoda",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mixed vegetable pakora",
+      "Vegetable pakoda"
+    ]
+  },
+  {
+    "slug": "aloo_chilli_pakoda",
+    "name": "Aloo Chilli Pakoda",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Aloo pakora potato fritters",
+      "Aloo pakoda"
+    ]
+  },
+  {
+    "slug": "aloo_tawa",
+    "name": "Aloo Tawa",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Aloo tawa fry spiced",
+      "Pan fried spiced potatoes"
+    ]
+  },
+  {
+    "slug": "gobi_65",
+    "name": "Gobi 65",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Gobi 65 cauliflower",
+      "Cauliflower 65"
+    ]
+  },
+  {
+    "slug": "gobi_chilly",
+    "name": "Gobi Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Chilli gobi Indo Chinese",
+      "Chilli cauliflower"
+    ]
+  },
+  {
+    "slug": "gobi_manchurian",
+    "name": "Gobi Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Gobi manchurian dry",
+      "Cauliflower manchurian"
+    ]
+  },
+  {
+    "slug": "veg_crispy",
+    "name": "Veg Crispy",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Veg crispy Indo Chinese",
+      "Crispy fried vegetables"
+    ]
+  },
+  {
+    "slug": "veg_spring_roll",
+    "name": "Veg Spring Roll",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable spring rolls crispy",
+      "Spring rolls"
+    ]
+  },
+  {
+    "slug": "veg_65",
+    "name": "Veg 65",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable 65",
+      "Veg 65 starter"
+    ]
+  },
+  {
+    "slug": "veg_chilly",
+    "name": "Veg Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Chilli vegetable dry",
+      "Chilli veggies"
+    ]
+  },
+  {
+    "slug": "veg_manchurian",
+    "name": "Veg Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Veg manchurian dry",
+      "Vegetable manchurian"
+    ]
+  },
+  {
+    "slug": "veg_bullet",
+    "name": "Veg Bullet",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable cutlet croquette",
+      "Veg cutlet"
+    ]
+  },
+  {
+    "slug": "babycorn_65",
+    "name": "Babycorn 65",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Baby corn 65 crispy",
+      "Baby corn 65"
+    ]
+  },
+  {
+    "slug": "babycorn_chilly",
+    "name": "Babycorn Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Chilli baby corn dry",
+      "Chilli babycorn"
+    ]
+  },
+  {
+    "slug": "babycorn_manchurian",
+    "name": "Babycorn Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Baby corn manchurian dry",
+      "Babycorn manchurian"
+    ]
+  },
+  {
+    "slug": "paneer_65",
+    "name": "Paneer 65",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer 65 crispy",
+      "Paneer 65"
+    ]
+  },
+  {
+    "slug": "paneer_chilly",
+    "name": "Paneer Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Chilli paneer dry Indo Chinese",
+      "Chilli paneer"
+    ]
+  },
+  {
+    "slug": "paneer_manchurian",
+    "name": "Paneer Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer manchurian dry",
+      "Paneer manchurian"
+    ]
+  },
+  {
+    "slug": "mushroom_65",
+    "name": "Mushroom 65",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mushroom 65 crispy",
+      "Mushroom 65"
+    ]
+  },
+  {
+    "slug": "mushroom_chilly",
+    "name": "Mushroom Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Chilli mushroom dry",
+      "Chilli mushroom"
+    ]
+  },
+  {
+    "slug": "mushroom_manchurian",
+    "name": "Mushroom Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mushroom manchurian dry",
+      "Mushroom manchurian"
+    ]
+  },
+  {
+    "slug": "mushroom_pepper_dry",
+    "name": "Mushroom Pepper Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mushroom pepper fry south indian",
+      "Mushroom pepper fry"
+    ]
+  },
+  {
+    "slug": "kaju_dry",
+    "name": "Kaju Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Fried cashews spiced",
+      "Roasted cashew nuts"
+    ]
+  },
+  {
+    "slug": "veg_gold_coin",
+    "name": "Veg Gold Coin",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable sesame gold coin toast",
+      "Sesame toast"
+    ]
+  },
+  {
+    "slug": "paneer_bhurji",
+    "name": "Paneer Bhurji",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer bhurji scrambled cottage cheese",
+      "Paneer bhurji"
+    ]
+  },
+  {
+    "slug": "paneer_satay",
+    "name": "Paneer Satay",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer satay skewers",
+      "Grilled paneer skewers"
+    ]
+  },
+  {
+    "slug": "babycorn_rapan_dry",
+    "name": "Babycorn Rapan Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Crispy baby corn fry",
+      "Baby corn fry"
+    ]
+  },
+  {
+    "slug": "gobi_rapan_dry",
+    "name": "Gobi Rapan Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Crispy fried cauliflower bites",
+      "Gobi fry"
+    ]
+  },
+  {
+    "slug": "paneer_pop_dry",
+    "name": "Paneer Pop Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Crispy paneer nuggets popcorn",
+      "Paneer bites"
+    ]
+  },
+  {
+    "slug": "egg_pakoda",
+    "name": "Egg Pakoda",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg pakora",
+      "Egg pakoda"
+    ]
+  },
+  {
+    "slug": "egg_65",
+    "name": "Egg 65",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg 65 spicy",
+      "Egg 65"
+    ]
+  },
+  {
+    "slug": "egg_chilly",
+    "name": "Egg Chilly",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chilli egg dry Indo Chinese",
+      "Chilli egg"
+    ]
+  },
+  {
+    "slug": "egg_manchurian",
+    "name": "Egg Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg manchurian dry",
+      "Egg manchurian"
+    ]
+  },
+  {
+    "slug": "chicken_65",
+    "name": "Chicken 65",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken 65 South Indian",
+      "Chicken 65"
+    ]
+  },
+  {
+    "slug": "chicken_chilly",
+    "name": "Chicken Chilly",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chilli chicken dry Indo Chinese",
+      "Chilli chicken dry"
+    ]
+  },
+  {
+    "slug": "chicken_manchurian",
+    "name": "Chicken Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken manchurian dry",
+      "Chicken manchurian"
+    ]
+  },
+  {
+    "slug": "chicken_crispy",
+    "name": "Chicken Crispy",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Crispy shredded chicken Indo Chinese",
+      "Crispy chicken"
+    ]
+  },
+  {
+    "slug": "chicken_lemon",
+    "name": "Chicken Lemon",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Lemon chicken Indo Chinese",
+      "Lemon chicken"
+    ]
+  },
+  {
+    "slug": "chicken_dilkush",
+    "name": "Chicken Dilkush",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Cashew chicken starter kebab",
+      "Chicken cashew fry"
+    ]
+  },
+  {
+    "slug": "chicken_garlic",
+    "name": "Chicken Garlic",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Garlic chicken dry Indo Chinese",
+      "Garlic chicken"
+    ]
+  },
+  {
+    "slug": "chicken_lollipop",
+    "name": "Chicken Lollipop (6 pcs)",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken lollipop Indo Chinese",
+      "Chicken lollipop"
+    ]
+  },
+  {
+    "slug": "chicken_hot_pan",
+    "name": "Chicken Hot Pan",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Sizzling hot pan chicken",
+      "Hot pan chicken"
+    ]
+  },
+  {
+    "slug": "chicken_satay",
+    "name": "Chicken Satay",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken satay skewers peanut",
+      "Chicken satay"
+    ]
+  },
+  {
+    "slug": "chicken_spring_roll",
+    "name": "Chicken Spring Roll",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken spring rolls crispy",
+      "Chicken spring roll"
+    ]
+  },
+  {
+    "slug": "chicken_pepper_dry",
+    "name": "Chicken Pepper Dry",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken pepper fry Mangalore coastal",
+      "Chicken pepper fry"
+    ]
+  },
+  {
+    "slug": "mutton_sukka",
+    "name": "Mutton Sukka",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton sukka Mangalorean",
+      "Mutton chukku"
+    ]
+  },
+  {
+    "slug": "mutton_ghee_roast",
+    "name": "Mutton Ghee Roast",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton ghee roast Kundapura",
+      "Mutton ghee roast"
+    ]
+  },
+  {
+    "slug": "mutton_ranods",
+    "name": "Mutton Ranods",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton pepper roast fry",
+      "Mutton dry fry"
+    ]
+  },
+  {
+    "slug": "mutton_65",
+    "name": "Mutton 65",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton 65 crispy spicy",
+      "Mutton 65"
+    ]
+  },
+  {
+    "slug": "mutton_kebab",
+    "name": "Mutton Kebab",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton shami kebab patties",
+      "Mutton kabab"
+    ]
+  },
+  {
+    "slug": "mutton_chilly",
+    "name": "Mutton Chilly",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chilli mutton dry",
+      "Chilli mutton"
+    ]
+  },
+  {
+    "slug": "hara_bhara_kabab",
+    "name": "Hara Bhara Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Hara bhara kabab spinach",
+      "Hara bhara kabab"
+    ]
+  },
+  {
+    "slug": "aloo_tikki",
+    "name": "Aloo Tikki",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Aloo tikki spiced potato patties",
+      "Aloo tikki"
+    ]
+  },
+  {
+    "slug": "babycorn_tikka",
+    "name": "Babycorn Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori baby corn tikka",
+      "Babycorn tikka"
+    ]
+  },
+  {
+    "slug": "tandoori_aloo_gobi",
+    "name": "Tandoori Aloo Gobi",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori aloo gobi roasted",
+      "Aloo gobi tandoori"
+    ]
+  },
+  {
+    "slug": "mushroom_tikka",
+    "name": "Mushroom Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori mushroom tikka clay oven",
+      "Mushroom tikka"
+    ]
+  },
+  {
+    "slug": "paneer_tikka",
+    "name": "Paneer Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer tikka clay oven grilled",
+      "Paneer tikka"
+    ]
+  },
+  {
+    "slug": "paneer_hariyali_tikka",
+    "name": "Paneer Hariyali Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Hariyali paneer tikka mint",
+      "Hariyali paneer"
+    ]
+  },
+  {
+    "slug": "paneer_cheese_tikka",
+    "name": "Paneer Cheese Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Cheese paneer tikka tandoori",
+      "Paneer cheese tikka"
+    ]
+  },
+  {
+    "slug": "paneer_lasooni_tikka",
+    "name": "Paneer Lasooni Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Lasooni paneer tikka garlic",
+      "Garlic paneer tikka"
+    ]
+  },
+  {
+    "slug": "paneer_malai_kabab",
+    "name": "Paneer Malai Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer malai tikka cream",
+      "Malai paneer tikka"
+    ]
+  },
+  {
+    "slug": "paneer_platter",
+    "name": "Paneer Platter (Full)",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori paneer tikka platter",
+      "Paneer platter"
+    ]
+  },
+  {
+    "slug": "chicken_kabab",
+    "name": "Chicken Kabab (Full)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori chicken kabab charred",
+      "Chicken kabab"
+    ]
+  },
+  {
+    "slug": "chicken_kalmi_kabab",
+    "name": "Chicken Kalmi Kabab (1 pc)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Kalmi kabab chicken drumstick",
+      "Kalmi kabab"
+    ]
+  },
+  {
+    "slug": "chicken_tangdi_kabab",
+    "name": "Chicken Tangdi Kabab (2 pcs)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Tangdi kabab tandoori chicken leg",
+      "Tangdi kabab"
+    ]
+  },
+  {
+    "slug": "chicken_tikka_kabab",
+    "name": "Chicken Tikka Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken tikka skewers tandoor",
+      "Chicken tikka"
+    ]
+  },
+  {
+    "slug": "chicken_malai_kabab",
+    "name": "Chicken Malai Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken malai kabab creamy white",
+      "Malai chicken kabab"
+    ]
+  },
+  {
+    "slug": "chicken_adraki_kabab",
+    "name": "Chicken Adraki Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Adraki chicken kabab ginger",
+      "Adraki kabab"
+    ]
+  },
+  {
+    "slug": "chicken_angara_kabab",
+    "name": "Chicken Angara Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken angara kabab spicy red",
+      "Angara kabab"
+    ]
+  },
+  {
+    "slug": "chicken_hariyali_kabab",
+    "name": "Chicken Hariyali Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Hariyali chicken kabab mint green",
+      "Hariyali chicken tikka"
+    ]
+  },
+  {
+    "slug": "chicken_seekh_kabab",
+    "name": "Chicken Seekh Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken seekh kabab skewers",
+      "Seekh kabab"
+    ]
+  },
+  {
+    "slug": "chicken_khole_kabab",
+    "name": "Chicken Khole Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken roll kabab skewers",
+      "Chicken kebab"
+    ]
+  },
+  {
+    "slug": "chicken_banjara_kabab",
+    "name": "Chicken Banjara Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Banjara chicken kabab spicy",
+      "Banjara kabab"
+    ]
+  },
+  {
+    "slug": "chicken_reshmi_kabab",
+    "name": "Chicken Reshmi Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Reshmi kabab chicken silky",
+      "Reshmi kabab"
+    ]
+  },
+  {
+    "slug": "chicken_kasturi_kabab",
+    "name": "Chicken Kasturi Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Kasturi chicken kabab methi",
+      "Kasturi kabab"
+    ]
+  },
+  {
+    "slug": "chicken_tandoori",
+    "name": "Chicken Tandoori (Full)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori chicken whole roasted",
+      "Tandoori chicken"
+    ]
+  },
+  {
+    "slug": "chicken_platter",
+    "name": "Chicken Platter (Full)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori chicken kabab platter assortment",
+      "Chicken platter"
+    ]
+  },
+  {
+    "slug": "boiled_egg",
+    "name": "Boiled Egg (2 pcs)",
+    "category": "Egg Dishes",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Hard boiled eggs sliced pepper",
+      "Boiled eggs"
+    ]
+  },
+  {
+    "slug": "egg_half_fry",
+    "name": "Egg Half Fry",
+    "category": "Egg Dishes",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Sunny side up fried egg pepper",
+      "Fried egg sunny side up"
+    ]
+  },
+  {
+    "slug": "egg_omelette",
+    "name": "Egg Omelette",
+    "category": "Egg Dishes",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Indian masala omelette herbs",
+      "Masala omelette"
+    ]
+  },
+  {
+    "slug": "egg_bhurji",
+    "name": "Egg Bhurji",
+    "category": "Egg Dishes",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Indian egg bhurji scrambled butter",
+      "Egg bhurji"
+    ]
+  },
+  {
+    "slug": "pomfret_tandoori",
+    "name": "Pomfret Tandoori",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori pomfret whole fish",
+      "Pomfret tandoori"
+    ]
+  },
+  {
+    "slug": "pomfret_tawa_fry",
+    "name": "Pomfret Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Pomfret tawa fry coastal masala",
+      "Pomfret tawa fry"
+    ]
+  },
+  {
+    "slug": "pomfret_rawa_fry",
+    "name": "Pomfret Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Pomfret rava fry coastal fish",
+      "Pomfret fry"
+    ]
+  },
+  {
+    "slug": "pomfret_masala_fry",
+    "name": "Pomfret Masala Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Pomfret masala fry spicy onion",
+      "Pomfret fry"
+    ]
+  },
+  {
+    "slug": "pomfret_curry",
+    "name": "Pomfret Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Pomfret fish curry Mangalorean coconut",
+      "Fish curry coastal"
+    ]
+  },
+  {
+    "slug": "king_fish_rawa_fry",
+    "name": "King Fish Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Surmai rava fry King fish steak",
+      "Surmai fry"
+    ]
+  },
+  {
+    "slug": "king_fish_tawa_fry",
+    "name": "King Fish Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Surmai tawa fry King fish",
+      "King fish fry"
+    ]
+  },
+  {
+    "slug": "king_fish_masala_fry",
+    "name": "King Fish Masala Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Surmai masala fry coastal",
+      "Surmai masala"
+    ]
+  },
+  {
+    "slug": "king_fish_biryani",
+    "name": "King Fish Biryani",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Fish biryani coastal jeerakasala",
+      "Fish biryani"
+    ]
+  },
+  {
+    "slug": "lady_fish_rawa_fry",
+    "name": "Lady Fish Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Kane rava fry Mangalore ladyfish",
+      "Kane fry"
+    ]
+  },
+  {
+    "slug": "lady_fish_tawa_fry",
+    "name": "Lady Fish Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Kane tawa fry ladyfish coastal",
+      "Kane tawa fry"
+    ]
+  },
+  {
+    "slug": "lady_fish_masala_curry",
+    "name": "Lady Fish Masala Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Kane fish curry coastal Mangalorean",
+      "Fish curry coconut"
+    ]
+  },
+  {
+    "slug": "silver_fish_rawa_fry",
+    "name": "Silver Fish Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Silver fish rava fry Motia Bolingir",
+      "Small fish fry"
+    ]
+  },
+  {
+    "slug": "silver_fish_tawa_fry",
+    "name": "Silver Fish Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Silver fish fry coastal",
+      "Fried silver fish"
+    ]
+  },
+  {
+    "slug": "silver_fish_curry",
+    "name": "Silver Fish Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Silver fish curry coastal village",
+      "Fish curry"
+    ]
+  },
+  {
+    "slug": "shark_chilli",
+    "name": "Shark Chilli",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chilli fish Indo Chinese",
+      "Fish chilli"
+    ]
+  },
+  {
+    "slug": "shark_masala_fry",
+    "name": "Shark Masala Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Shark fish fry coastal masala",
+      "Fish masala fry"
+    ]
+  },
+  {
+    "slug": "shark_curry",
+    "name": "Shark Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Shark fish curry coastal coconut",
+      "Fish curry"
+    ]
+  },
+  {
+    "slug": "bangda_rawa_fry",
+    "name": "Bangda Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Bangda rava fry Indian mackerel",
+      "Bangda fry"
+    ]
+  },
+  {
+    "slug": "bangda_tawa_fry",
+    "name": "Bangda Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Bangda tawa fry mackerel coastal",
+      "Bangda tawa fry"
+    ]
+  },
+  {
+    "slug": "bangda_masala_curry",
+    "name": "Bangda Masala Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Bangda fish curry coconut mango",
+      "Mackerel curry"
+    ]
+  },
+  {
+    "slug": "prawns_ghee_roast",
+    "name": "Prawns Ghee Roast",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Prawn ghee roast Mangalorean coastal",
+      "Prawns ghee roast"
+    ]
+  },
+  {
+    "slug": "prawns_butter_garlic",
+    "name": "Prawns Butter Garlic",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Garlic butter prawns parsley",
+      "Butter garlic prawns"
+    ]
+  },
+  {
+    "slug": "prawns_rawa_fry",
+    "name": "Prawns Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Prawns rava fry coastal golden",
+      "Prawns fry"
+    ]
+  },
+  {
+    "slug": "prawns_masala_fry",
+    "name": "Prawns Masala Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Prawns masala fry onion tomato",
+      "Prawn masala"
+    ]
+  },
+  {
+    "slug": "prawns_chilli",
+    "name": "Prawns Chilli",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chilli prawns Indo Chinese",
+      "Chilli prawn"
+    ]
+  },
+  {
+    "slug": "prawns_biryani",
+    "name": "Prawns Biryani",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Prawn biryani coastal tiger prawns ghee basmati",
+      "Prawn biryani"
+    ]
+  },
+  {
+    "slug": "squid_ghee_roast",
+    "name": "Squid Ghee Roast",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Squid ghee roast coastal masala",
+      "Squid roast"
+    ]
+  },
+  {
+    "slug": "squid_sukka",
+    "name": "Squid Sukka",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Squid sukka roasted coconut",
+      "Squid sukka"
+    ]
+  },
+  {
+    "slug": "squid_butter_garlic",
+    "name": "Squid Butter Garlic",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Garlic butter squid calamari rings",
+      "Butter garlic squid"
+    ]
+  },
+  {
+    "slug": "squid_pepper_dry",
+    "name": "Squid Pepper Dry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Squid pepper fry calamari",
+      "Squid pepper dry"
+    ]
+  },
+  {
+    "slug": "crab_ghee_roast",
+    "name": "Crab Ghee Roast",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Crab ghee roast coastal mud crab",
+      "Crab roast"
+    ]
+  },
+  {
+    "slug": "crab_sukka",
+    "name": "Crab Sukka",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Crab sukka roasted coconut masala",
+      "Crab sukka"
+    ]
+  },
+  {
+    "slug": "crab_butter_garlic",
+    "name": "Crab Butter Garlic",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Crab butter garlic whole",
+      "Butter garlic crab"
+    ]
+  },
+  {
+    "slug": "crab_pepper_dry",
+    "name": "Crab Pepper Dry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Crab pepper fry spicy black pepper",
+      "Crab pepper fry"
+    ]
+  },
+  {
+    "slug": "dhodi_rawa_tawa_fry",
+    "name": "Dhodi Rawa / Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Fish rava fry coastal Arabian sea",
+      "Fish fry"
+    ]
+  },
+  {
+    "slug": "nang_tawa_fry",
+    "name": "Nang Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Sole fish fry Nang tawa coastal",
+      "Sole fish fry"
+    ]
+  },
+  {
+    "slug": "shell_fish_sukka",
+    "name": "Shell Fish Sukka",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Clams sukka Marwai coastal coconut",
+      "Clams sukka"
+    ]
+  },
+  {
+    "slug": "aloo_jeera",
+    "name": "Aloo Jeera",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Jeera aloo cumin potatoes",
+      "Jeera aloo"
+    ]
+  },
+  {
+    "slug": "dal_fry",
+    "name": "Dal Fry",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Dal fry yellow lentils tempered",
+      "Dal fry"
+    ]
+  },
+  {
+    "slug": "bhendi_masala",
+    "name": "Bhendi Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Bhindi masala okra onion tomato",
+      "Bhindi masala"
+    ]
+  },
+  {
+    "slug": "capsicum_masala",
+    "name": "Capsicum Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Capsicum masala bell pepper curry",
+      "Capsicum curry"
+    ]
+  },
+  {
+    "slug": "aloo_mutter",
+    "name": "Aloo Mutter",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Aloo matar potato peas curry",
+      "Aloo matar"
+    ]
+  },
+  {
+    "slug": "aloo_palak",
+    "name": "Aloo Palak",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Aloo palak potato spinach curry",
+      "Aloo palak"
+    ]
+  },
+  {
+    "slug": "dal_kolhapuri",
+    "name": "Dal Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Dal kolhapuri spicy red lentils",
+      "Dal kolhapuri"
+    ]
+  },
+  {
+    "slug": "dal_tadka",
+    "name": "Dal Tadka",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Dal tadka ghee red chili tempered",
+      "Dal tadka"
+    ]
+  },
+  {
+    "slug": "tomato_curry",
+    "name": "Tomato Curry",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tomato curry tempered mustard curry leaves",
+      "Tomato curry"
+    ]
+  },
+  {
+    "slug": "mix_vegetable",
+    "name": "Mix Vegetable",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mixed vegetable curry Indian gravy",
+      "Mix vegetable"
+    ]
+  },
+  {
+    "slug": "veg_handi",
+    "name": "Veg Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Veg handi earthen pot vegetable",
+      "Veg handi"
+    ]
+  },
+  {
+    "slug": "veg_kurma",
+    "name": "Veg Kurma",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable korma coconut cashew curry",
+      "Veg korma"
+    ]
+  },
+  {
+    "slug": "methi_chaman",
+    "name": "Methi Chaman",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Methi chaman kashmiri paneer fenugreek",
+      "Methi paneer"
+    ]
+  },
+  {
+    "slug": "veg_kolhapuri",
+    "name": "Veg Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Veg kolhapuri spicy red curry",
+      "Veg kolhapuri"
+    ]
+  },
+  {
+    "slug": "veg_kadai",
+    "name": "Veg Kadai",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kadai vegetable capsicum crushed spices",
+      "Kadai veg"
+    ]
+  },
+  {
+    "slug": "lasooni_palak",
+    "name": "Lasooni Palak",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Lehsuni palak burnt garlic spinach",
+      "Lasooni palak"
+    ]
+  },
+  {
+    "slug": "paneer_kolhapuri",
+    "name": "Paneer Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer kolhapuri spicy red masala",
+      "Paneer kolhapuri"
+    ]
+  },
+  {
+    "slug": "paneer_masala",
+    "name": "Paneer Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer masala onion tomato gravy",
+      "Paneer masala"
+    ]
+  },
+  {
+    "slug": "paneer_mutter",
+    "name": "Paneer Mutter",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Matar paneer peas cottage cheese",
+      "Matar paneer"
+    ]
+  },
+  {
+    "slug": "paneer_palak",
+    "name": "Paneer Palak",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Palak paneer spinach cottage cheese",
+      "Palak paneer"
+    ]
+  },
+  {
+    "slug": "veg_jalfrezi",
+    "name": "Veg Jalfrezi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable jalfrezi tangy stir fry",
+      "Veg jalfrezi"
+    ]
+  },
+  {
+    "slug": "veg_diwani_handi",
+    "name": "Veg Diwani Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Diwani handi vegetable cream spinach",
+      "Diwani handi"
+    ]
+  },
+  {
+    "slug": "veg_tawa_masala",
+    "name": "Veg Tawa Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tawa veg masala griddle vegetables",
+      "Tawa vegetable"
+    ]
+  },
+  {
+    "slug": "mushroom_kadai",
+    "name": "Mushroom Kadai",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kadai mushroom capsicum thick gravy",
+      "Kadai mushroom"
+    ]
+  },
+  {
+    "slug": "mushroom_masala",
+    "name": "Mushroom Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mushroom masala brown gravy",
+      "Mushroom masala"
+    ]
+  },
+  {
+    "slug": "plain_palak",
+    "name": "Plain Palak",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Palak saag pureed spinach tempered",
+      "Palak saag"
+    ]
+  },
+  {
+    "slug": "paneer_do_pyaza",
+    "name": "Paneer Do Pyaza",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer do pyaza rich onion gravy",
+      "Paneer do pyaza"
+    ]
+  },
+  {
+    "slug": "paneer_hyderabadi",
+    "name": "Paneer Hyderabadi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer hyderabadi mint spinach green",
+      "Paneer hyderabadi"
+    ]
+  },
+  {
+    "slug": "paneer_kadai",
+    "name": "Paneer Kadai",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kadai paneer bell peppers pounded spices",
+      "Kadai paneer"
+    ]
+  },
+  {
+    "slug": "paneer_kurma",
+    "name": "Paneer Kurma",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer korma coconut cashew gravy",
+      "Paneer korma"
+    ]
+  },
+  {
+    "slug": "paneer_makhanwala",
+    "name": "Paneer Makhanwala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer makhani butter tomato gravy",
+      "Paneer makhani"
+    ]
+  },
+  {
+    "slug": "veg_makhanwala",
+    "name": "Veg Makhanwala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Veg makhanwala butter tomato cream",
+      "Veg makhanwala"
+    ]
+  },
+  {
+    "slug": "kaju_kolhapuri",
+    "name": "Kaju Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kaju kolhapuri spicy cashew curry",
+      "Kaju kolhapuri"
+    ]
+  },
+  {
+    "slug": "kaju_curry",
+    "name": "Kaju Curry",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kaju curry roasted cashews creamy gravy",
+      "Kaju curry"
+    ]
+  },
+  {
+    "slug": "kaju_hyderabadi",
+    "name": "Kaju Hyderabadi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kaju hyderabadi green mint cashew curry",
+      "Kaju hyderabadi"
+    ]
+  },
+  {
+    "slug": "kaju_masala",
+    "name": "Kaju Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kaju masala thick brown onion gravy",
+      "Kaju masala"
+    ]
+  },
+  {
+    "slug": "kaju_makhanwala",
+    "name": "Kaju Makhanwala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kaju makhanwala butter cashew gravy",
+      "Kaju makhani"
+    ]
+  },
+  {
+    "slug": "malai_kofta",
+    "name": "Malai Kofta",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Malai kofta creamy cashew sweet sauce",
+      "Malai kofta"
+    ]
+  },
+  {
+    "slug": "veg_patiala",
+    "name": "Veg Patiala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Veg patiala rolled papad gravy",
+      "Veg patiala"
+    ]
+  },
+  {
+    "slug": "paneer_tawa_masala",
+    "name": "Paneer Tawa Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tawa paneer masala pan roasted",
+      "Tawa paneer"
+    ]
+  },
+  {
+    "slug": "paneer_tikka_masala",
+    "name": "Paneer Tikka Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer tikka masala char grilled orange",
+      "Paneer tikka masala"
+    ]
+  },
+  {
+    "slug": "paneer_butter_masala",
+    "name": "Paneer Butter Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer butter masala rich makhani",
+      "Paneer butter masala"
+    ]
+  },
+  {
+    "slug": "veg_malwani",
+    "name": "Veg Malwani",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Malvani veg curry coastal coconut",
+      "Malvani veg"
+    ]
+  },
+  {
+    "slug": "mushroom_handi",
+    "name": "Mushroom Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mushroom handi clay pot gravy",
+      "Mushroom handi"
+    ]
+  },
+  {
+    "slug": "paneer_handi",
+    "name": "Paneer Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer handi traditional brown gravy",
+      "Paneer handi"
+    ]
+  },
+  {
+    "slug": "kaju_paneer_handi",
+    "name": "Kaju Paneer Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kaju paneer handi royal cashew paneer",
+      "Kaju paneer"
+    ]
+  },
+  {
+    "slug": "kaju_handi",
+    "name": "Kaju Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kaju handi cashews earthen pot",
+      "Kaju handi"
+    ]
+  },
+  {
+    "slug": "julius_special_veg",
+    "name": "Julius Special Veg",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Shahi mixed vegetable navratan korma",
+      "Royal veg curry"
+    ]
+  },
+  {
+    "slug": "egg_masala",
+    "name": "Egg Masala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg masala onion ginger tomato gravy",
+      "Egg masala"
+    ]
+  },
+  {
+    "slug": "egg_kolhapuri",
+    "name": "Egg Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg kolhapuri fiery red chili gravy",
+      "Egg kolhapuri"
+    ]
+  },
+  {
+    "slug": "egg_hyderabadi",
+    "name": "Egg Hyderabadi",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg hyderabadi green coriander mint",
+      "Egg hyderabadi"
+    ]
+  },
+  {
+    "slug": "egg_makhanwala",
+    "name": "Egg Makhanwala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg makhani butter tomato cream sauce",
+      "Egg makhanwala"
+    ]
+  },
+  {
+    "slug": "egg_maharaja",
+    "name": "Egg Maharaja",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg maharaja royal cashew curry",
+      "Egg maharaja"
+    ]
+  },
+  {
+    "slug": "egg_afghani",
+    "name": "Egg Afghani",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg afghani mild white cream cashew",
+      "Egg afghani"
+    ]
+  },
+  {
+    "slug": "egg_curry",
+    "name": "Egg Curry",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Homestyle Indian egg curry",
+      "Egg curry"
+    ]
+  },
+  {
+    "slug": "chicken_sukka",
+    "name": "Chicken Sukka",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken sukka Mangalorean roasted coconut",
+      "Chicken sukka"
+    ]
+  },
+  {
+    "slug": "gadde_lur_sukka",
+    "name": "Gadde Lur-Sukka",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Country chicken sukka coastal rustic",
+      "Country chicken fry"
+    ]
+  },
+  {
+    "slug": "chicken_masala",
+    "name": "Chicken Masala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken masala brown onion tomato gravy",
+      "Chicken masala"
+    ]
+  },
+  {
+    "slug": "chicken_kolhapuri",
+    "name": "Chicken Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken kolhapuri fiery spicy red curry",
+      "Chicken kolhapuri"
+    ]
+  },
+  {
+    "slug": "chicken_jalfrezi",
+    "name": "Chicken Jalfrezi",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken jalfrezi bell peppers thick sauce",
+      "Chicken jalfrezi"
+    ]
+  },
+  {
+    "slug": "chicken_kadai_masala",
+    "name": "Chicken Kadai Masala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Kadai chicken roasted coriander chili",
+      "Kadai chicken"
+    ]
+  },
+  {
+    "slug": "chicken_do_pyaza",
+    "name": "Chicken Do Pyaza",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken do pyaza double onions aromatic",
+      "Chicken do pyaza"
+    ]
+  },
+  {
+    "slug": "chicken_mughlai",
+    "name": "Chicken Mughlai",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken mughlai royal egg cream cashew",
+      "Chicken mughlai"
+    ]
+  },
+  {
+    "slug": "chicken_handi",
+    "name": "Chicken Handi",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken handi slow cooked earthen pot",
+      "Chicken handi"
+    ]
+  },
+  {
+    "slug": "chicken_butter_masala",
+    "name": "Chicken Butter Masala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Butter chicken murgh makhani rich tomato",
+      "Butter chicken"
+    ]
+  },
+  {
+    "slug": "chicken_tikka_masala",
+    "name": "Chicken Tikka Masala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken tikka masala grilled chunks orange",
+      "Chicken tikka masala"
+    ]
+  },
+  {
+    "slug": "chicken_malwani",
+    "name": "Chicken Malwani",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken malvani roasted coconut coastal",
+      "Malvani chicken"
+    ]
+  },
+  {
+    "slug": "kundapur_chicken",
+    "name": "Kundapur Chicken",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Kundapura chicken curry coastal coconut",
+      "Kundapur chicken"
+    ]
+  },
+  {
+    "slug": "chicken_murgh_musallam",
+    "name": "Chicken Murgh Musallam",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Murgh musallam whole chicken royal gravy",
+      "Murgh musallam"
+    ]
+  },
+  {
+    "slug": "chicken_julius_special",
+    "name": "Chicken Julius Special",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chef special royal chicken curry herbs",
+      "Special chicken curry"
+    ]
+  },
+  {
+    "slug": "chicken_adraki_masala",
+    "name": "Chicken Adraki Masala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken adraki fresh crushed ginger gravy",
+      "Chicken adraki"
+    ]
+  },
+  {
+    "slug": "mutton_masala",
+    "name": "Mutton Masala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton masala tender slow simmered brown gravy",
+      "Mutton masala"
+    ]
+  },
+  {
+    "slug": "mutton_handi",
+    "name": "Mutton Handi",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton handi clay pot aromatic spices",
+      "Mutton handi"
+    ]
+  },
+  {
+    "slug": "mutton_kadai",
+    "name": "Mutton Kadai",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Kadai mutton wok capsicum pounded spices",
+      "Kadai mutton"
+    ]
+  },
+  {
+    "slug": "mutton_kolhapuri",
+    "name": "Mutton Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton kolhapuri fiery spicy red masala",
+      "Mutton kolhapuri"
+    ]
+  },
+  {
+    "slug": "mutton_makhanwala",
+    "name": "Mutton Makhanwala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton makhanwala buttery tomato cashew",
+      "Mutton makhani"
+    ]
+  },
+  {
+    "slug": "mutton_ginger",
+    "name": "Mutton Ginger",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton ginger adraki julienned ginger",
+      "Mutton adraki"
+    ]
+  },
+  {
+    "slug": "mutton_rogan_josh",
+    "name": "Mutton Rogan Josh",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton rogan josh kashmiri fennel alkanet",
+      "Mutton rogan josh"
+    ]
+  },
+  {
+    "slug": "mutton_malwani",
+    "name": "Mutton Malwani",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Mutton malvani coastal coconut teppal",
+      "Mutton malvani"
+    ]
+  },
+  {
+    "slug": "mutton_julius_special",
+    "name": "Mutton Julius Special",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Grand royal tender mutton delicacy gravy",
+      "Special mutton curry"
+    ]
+  },
+  {
+    "slug": "tandoori_roti",
+    "name": "Tandoori Roti",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori roti whole wheat clay oven",
+      "Tandoori roti"
+    ]
+  },
+  {
+    "slug": "butter_roti",
+    "name": "Butter Roti",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Butter tandoori roti whole wheat",
+      "Butter roti"
+    ]
+  },
+  {
+    "slug": "naan",
+    "name": "Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Plain tandoori naan leavened flatbread",
+      "Naan bread"
+    ]
+  },
+  {
+    "slug": "butter_naan",
+    "name": "Butter Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Butter naan tandoori flatbread melted butter",
+      "Butter naan"
+    ]
+  },
+  {
+    "slug": "butter_garlic_naan",
+    "name": "Butter Garlic Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Garlic butter naan minced garlic butter",
+      "Garlic naan"
+    ]
+  },
+  {
+    "slug": "cheese_butter_garlic_naan",
+    "name": "Cheese Butter Garlic Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Cheese garlic naan melted cheese herbs",
+      "Cheese naan"
+    ]
+  },
+  {
+    "slug": "garlic_naan",
+    "name": "Garlic Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Garlic naan flatbread cilantro roasted garlic",
+      "Garlic naan"
+    ]
+  },
+  {
+    "slug": "kulcha",
+    "name": "Kulcha",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Tandoori kulcha sesame seeds",
+      "Kulcha bread"
+    ]
+  },
+  {
+    "slug": "butter_kulcha",
+    "name": "Butter Kulcha",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Butter kulcha fluffy tandoor flatbread",
+      "Butter kulcha"
+    ]
+  },
+  {
+    "slug": "parota",
+    "name": "Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Malabar parotta flaky layered South Indian",
+      "Parotta"
+    ]
+  },
+  {
+    "slug": "butter_parota",
+    "name": "Butter Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Butter malabar parotta layered flaky",
+      "Butter parotta"
+    ]
+  },
+  {
+    "slug": "garlic_parota",
+    "name": "Garlic Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Garlic parotta layered crispy butter",
+      "Garlic parotta"
+    ]
+  },
+  {
+    "slug": "cheese_parota",
+    "name": "Cheese Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Cheese parotta layered molten cheese",
+      "Cheese parotta"
+    ]
+  },
+  {
+    "slug": "methi_roti",
+    "name": "Methi Roti",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Methi roti fenugreek leaves flatbread",
+      "Methi roti"
+    ]
+  },
+  {
+    "slug": "aloo_stuffed_parota",
+    "name": "Aloo Stuffed Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Aloo paratha spiced mashed potatoes",
+      "Aloo paratha"
+    ]
+  },
+  {
+    "slug": "paneer_stuffed_parota",
+    "name": "Paneer Stuffed Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer paratha stuffed cottage cheese",
+      "Paneer paratha"
+    ]
+  },
+  {
+    "slug": "veg_stuffed_parota",
+    "name": "Veg Stuffed Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mix vegetable stuffed paratha flatbread",
+      "Veg paratha"
+    ]
+  },
+  {
+    "slug": "chicken_stuffed_parota",
+    "name": "Chicken Stuffed Parota",
+    "category": "Indian Breads",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken keema paratha stuffed flatbread",
+      "Chicken paratha"
+    ]
+  },
+  {
+    "slug": "chapathi",
+    "name": "Chapathi",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Chapati thin whole wheat phulka",
+      "Chapati phulka"
+    ]
+  },
+  {
+    "slug": "veg_fried_rice",
+    "name": "Veg Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable fried rice wok basmati",
+      "Veg fried rice"
+    ]
+  },
+  {
+    "slug": "veg_schezwan_fried_rice",
+    "name": "Veg Schezwan Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Schezwan fried rice spicy homemade",
+      "Schezwan fried rice"
+    ]
+  },
+  {
+    "slug": "veg_schezwan_triple_fried_rice",
+    "name": "Veg Schezwan Triple Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Triple schezwan fried rice noodles gravy",
+      "Triple fried rice"
+    ]
+  },
+  {
+    "slug": "veg_hong_kong_fried_rice",
+    "name": "Veg Hong Kong Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Hong kong fried rice bell peppers cashews",
+      "Hong kong fried rice"
+    ]
+  },
+  {
+    "slug": "veg_singapore_fried_rice",
+    "name": "Veg Singapore Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Singapore fried rice curry powder yellow",
+      "Singapore fried rice"
+    ]
+  },
+  {
+    "slug": "mushroom_fried_rice",
+    "name": "Mushroom Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Mushroom fried rice sliced button mushrooms",
+      "Mushroom fried rice"
+    ]
+  },
+  {
+    "slug": "paneer_fried_rice",
+    "name": "Paneer Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Paneer fried rice golden cubes vegetables",
+      "Paneer fried rice"
+    ]
+  },
+  {
+    "slug": "onion_chilli_fried_rice",
+    "name": "Onion Chilli Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Chilli garlic fried rice charred onions",
+      "Chilli fried rice"
+    ]
+  },
+  {
+    "slug": "egg_fried_rice",
+    "name": "Egg Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg fried rice scrambled egg spring onions",
+      "Egg fried rice"
+    ]
+  },
+  {
+    "slug": "egg_schezwan_fried_rice",
+    "name": "Egg Schezwan Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg schezwan fried rice scrambled eggs",
+      "Schezwan egg fried rice"
+    ]
+  },
+  {
+    "slug": "chicken_fried_rice",
+    "name": "Chicken Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken fried rice wok shredded chicken egg",
+      "Chicken fried rice"
+    ]
+  },
+  {
+    "slug": "chicken_schezwan_fried_rice",
+    "name": "Chicken Schezwan Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken schezwan fried rice spicy wok",
+      "Schezwan chicken fried rice"
+    ]
+  },
+  {
+    "slug": "chicken_singapore_fried_rice",
+    "name": "Chicken Singapore Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Singapore chicken fried rice yellow curry",
+      "Singapore chicken rice"
+    ]
+  },
+  {
+    "slug": "chicken_schezwan_triple_fried_rice",
+    "name": "Chicken Schezwan Triple Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken triple schezwan rice noodles egg",
+      "Triple schezwan chicken rice"
+    ]
+  },
+  {
+    "slug": "prawns_fried_rice",
+    "name": "Prawns Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Prawn fried rice coastal tiger prawns egg",
+      "Prawn fried rice"
+    ]
+  },
+  {
+    "slug": "veg_hakka_noodles",
+    "name": "Veg Hakka Noodles",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable hakka noodles stir fried julienned",
+      "Veg hakka noodles"
+    ]
+  },
+  {
+    "slug": "veg_schezwan_noodles",
+    "name": "Veg Schezwan Noodles",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Schezwan noodles spicy red vegetable",
+      "Schezwan noodles"
+    ]
+  },
+  {
+    "slug": "veg_crispy_noodles",
+    "name": "Veg Crispy Noodles",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Crispy fried noodles sweet sour vegetable",
+      "Crispy noodles"
+    ]
+  },
+  {
+    "slug": "veg_hong_kong_noodles",
+    "name": "Veg Hong Kong Noodles",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Hong kong noodles oriental bell peppers",
+      "Hong kong noodles"
+    ]
+  },
+  {
+    "slug": "veg_american_chopsuey",
+    "name": "Veg American Chopsuey",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "American chopsuey crispy noodles sweet sour",
+      "American chopsuey"
+    ]
+  },
+  {
+    "slug": "veg_chinese_noodles",
+    "name": "Veg Chinese Noodles",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Chinese wok noodles street style",
+      "Chinese noodles"
+    ]
+  },
+  {
+    "slug": "veg_chinese_chop",
+    "name": "Veg Chinese Chop",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Crispy noodle chopsuey seasoned greens",
+      "Chopsuey"
+    ]
+  },
+  {
+    "slug": "plain_rice",
+    "name": "Plain Rice (Full)",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Steamed white rice fluffy bowl",
+      "Steamed rice"
+    ]
+  },
+  {
+    "slug": "steam_rice",
+    "name": "Steam Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Long grain basmati steamed rice",
+      "Basmati rice"
+    ]
+  },
+  {
+    "slug": "boiled_rice",
+    "name": "Boiled Rice (Kaje Rice)",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Red boiled rice Kaje rice coastal Kerala",
+      "Matta rice"
+    ]
+  },
+  {
+    "slug": "kuska_rice",
+    "name": "Kuska Rice (Full)",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Kuska biryani flavored rice spiced stock",
+      "Kuska rice"
+    ]
+  },
+  {
+    "slug": "masala_rice",
+    "name": "Masala Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Masala rice roasted onions tomatoes garam masala",
+      "Masala rice"
+    ]
+  },
+  {
+    "slug": "veg_pulao",
+    "name": "Veg Pulao",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable pulao basmati peas carrots spices",
+      "Veg pulao"
+    ]
+  },
+  {
+    "slug": "curd_rice",
+    "name": "Curd Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Curd rice tempered mustard ginger curry leaves",
+      "Curd rice"
+    ]
+  },
+  {
+    "slug": "special_curd_rice",
+    "name": "Special Curd Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Curd rice pomegranate cashews tempered",
+      "Curd rice"
+    ]
+  },
+  {
+    "slug": "ghee_rice",
+    "name": "Ghee Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Neychoru ghee rice jeerakasala cashews",
+      "Ghee rice"
+    ]
+  },
+  {
+    "slug": "palak_khichdi",
+    "name": "Palak Khichdi",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Palak khichdi spinach lentils rice",
+      "Palak khichdi"
+    ]
+  },
+  {
+    "slug": "dal_khichdi",
+    "name": "Dal Khichdi",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Dal khichdi yellow lentils cumin ghee",
+      "Dal khichdi"
+    ]
+  },
+  {
+    "slug": "palak_rice",
+    "name": "Palak Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Palak rice basmati pureed spinach",
+      "Palak rice"
+    ]
+  },
+  {
+    "slug": "lemon_rice",
+    "name": "Lemon Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Lemon rice mustard peanuts curry leaves",
+      "Lemon rice"
+    ]
+  },
+  {
+    "slug": "peas_pulao",
+    "name": "Peas Pulao",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Matar pulao sweet green peas basmati",
+      "Peas pulao"
+    ]
+  },
+  {
+    "slug": "veg_biryani",
+    "name": "Veg Biryani",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Vegetable dum biryani layered saffron",
+      "Veg biryani"
+    ]
+  },
+  {
+    "slug": "jeera_rice",
+    "name": "Jeera Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "existingLocal": null,
+    "queries": [
+      "Jeera rice cumin seeds basmati ghee",
+      "Jeera rice"
+    ]
+  },
+  {
+    "slug": "egg_biryani",
+    "name": "Egg Biryani",
+    "category": "Biryani & Indian Rice",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Egg dum biryani fried boiled eggs caramel onions",
+      "Egg biryani"
+    ]
+  },
+  {
+    "slug": "chicken_biryani",
+    "name": "Chicken Biryani (Full)",
+    "category": "Biryani & Indian Rice",
+    "isVeg": false,
+    "existingLocal": "/images/dishes/chicken_biryani.png",
+    "queries": [
+      "Chicken dum biryani authentic",
+      "Chicken biryani"
+    ]
+  },
+  {
+    "slug": "chicken_tikka_biryani",
+    "name": "Chicken Tikka Biryani",
+    "category": "Biryani & Indian Rice",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken tikka biryani tandoori chunks",
+      "Tikka biryani"
+    ]
+  },
+  {
+    "slug": "chicken_kolhapuri_biryani",
+    "name": "Chicken Kolhapuri Biryani",
+    "category": "Biryani & Indian Rice",
+    "isVeg": false,
+    "existingLocal": null,
+    "queries": [
+      "Chicken kolhapuri biryani spicy fiery",
+      "Kolhapuri biryani"
+    ]
+  },
+  {
+    "slug": "mutton_biryani",
+    "name": "Mutton Biryani (Full)",
+    "category": "Biryani & Indian Rice",
+    "isVeg": false,
+    "existingLocal": "/images/dishes/mutton_biryani.png",
+    "queries": [
+      "Mutton dum biryani succulent saffron",
+      "Mutton biryani"
+    ]
+  }
+]

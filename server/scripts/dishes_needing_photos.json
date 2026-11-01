@@ -1,0 +1,1586 @@
+[
+  {
+    "id": 25,
+    "name": "Honnavar Toddy Punch",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "filename": "honnavar_toddy_punch.jpg",
+    "hash": "1bbb8ba89699474fa89885f19ed57802"
+  },
+  {
+    "id": 27,
+    "name": "Alphonso Mango Mule",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "filename": "alphonso_mango_mule.jpg",
+    "hash": "1bbb8ba89699474fa89885f19ed57802"
+  },
+  {
+    "id": 28,
+    "name": "Fresh Tender Coconut (Elaneer)",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "filename": "fresh_tender_coconut_elaneer.jpg",
+    "hash": "1bbb8ba89699474fa89885f19ed57802"
+  },
+  {
+    "id": 328,
+    "name": "Fresh Lime Soda (Sweet / Salt)",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "filename": "fresh_lime_soda.jpg",
+    "hash": "1bbb8ba89699474fa89885f19ed57802"
+  },
+  {
+    "id": 329,
+    "name": "Cold Soft Drinks (330ml)",
+    "category": "Julius Bar & Beverages",
+    "isVeg": true,
+    "filename": "cold_soft_drinks.jpg",
+    "hash": "1bbb8ba89699474fa89885f19ed57802"
+  },
+  {
+    "id": 33,
+    "name": "Chilli Fry",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "filename": "chilli_fry.jpg",
+    "hash": "81ca69e2e72ee2ea528a612cef8f0a3c"
+  },
+  {
+    "id": 35,
+    "name": "Raja Masala",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "filename": "raja_masala.jpg",
+    "hash": "81ca69e2e72ee2ea528a612cef8f0a3c"
+  },
+  {
+    "id": 38,
+    "name": "G.P. Dry",
+    "category": "Side Dish / Snack",
+    "isVeg": true,
+    "filename": "g_p_dry.jpg",
+    "hash": "81ca69e2e72ee2ea528a612cef8f0a3c"
+  },
+  {
+    "id": 45,
+    "name": "Veg Noodle Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "filename": "veg_noodle_soup.jpg",
+    "hash": "34b8350d6edc1840e02424d13777af99"
+  },
+  {
+    "id": 48,
+    "name": "Cream of Veg Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "filename": "cream_of_veg_soup.jpg",
+    "hash": "34b8350d6edc1840e02424d13777af99"
+  },
+  {
+    "id": 49,
+    "name": "Veg Sweet Corn Soup",
+    "category": "Soups",
+    "isVeg": true,
+    "filename": "veg_sweet_corn_soup.jpg",
+    "hash": "34b8350d6edc1840e02424d13777af99"
+  },
+  {
+    "id": 50,
+    "name": "Chicken Hot & Sour Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "filename": "chicken_hot_sour_soup.jpg",
+    "hash": "34b8350d6edc1840e02424d13777af99"
+  },
+  {
+    "id": 51,
+    "name": "Chicken Lung Fung Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "filename": "chicken_lung_fung_soup.jpg",
+    "hash": "34b8350d6edc1840e02424d13777af99"
+  },
+  {
+    "id": 55,
+    "name": "Mutton Manchow Soup",
+    "category": "Soups",
+    "isVeg": false,
+    "filename": "mutton_manchow_soup.jpg",
+    "hash": "34b8350d6edc1840e02424d13777af99"
+  },
+  {
+    "id": 60,
+    "name": "Aloo Tawa",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "aloo_tawa.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 61,
+    "name": "Gobi 65",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "gobi_65.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 62,
+    "name": "Gobi Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "gobi_chilly.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 63,
+    "name": "Gobi Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "gobi_manchurian.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 64,
+    "name": "Veg Crispy",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "veg_crispy.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 66,
+    "name": "Veg 65",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "veg_65.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 67,
+    "name": "Veg Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "veg_chilly.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 70,
+    "name": "Babycorn 65",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "babycorn_65.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 71,
+    "name": "Babycorn Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "babycorn_chilly.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 77,
+    "name": "Mushroom Chilly",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "mushroom_chilly.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 79,
+    "name": "Mushroom Pepper Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "mushroom_pepper_dry.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 81,
+    "name": "Veg Gold Coin",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "veg_gold_coin.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 83,
+    "name": "Paneer Satay",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "paneer_satay.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 84,
+    "name": "Babycorn Rapan Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "babycorn_rapan_dry.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 85,
+    "name": "Gobi Rapan Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "gobi_rapan_dry.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 86,
+    "name": "Paneer Pop Dry",
+    "category": "Chinese Starters",
+    "isVeg": true,
+    "filename": "paneer_pop_dry.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 88,
+    "name": "Egg 65",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "egg_65.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 90,
+    "name": "Egg Manchurian",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "egg_manchurian.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 92,
+    "name": "Chicken Chilly",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "chicken_chilly.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 96,
+    "name": "Chicken Dilkush",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "chicken_dilkush.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 99,
+    "name": "Chicken Hot Pan",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "chicken_hot_pan.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 101,
+    "name": "Chicken Spring Roll",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "chicken_spring_roll.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 102,
+    "name": "Chicken Pepper Dry",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "chicken_pepper_dry.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 103,
+    "name": "Mutton Sukka",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "mutton_sukka.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 104,
+    "name": "Mutton Ghee Roast",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "mutton_ghee_roast.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 105,
+    "name": "Mutton Ranods",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "mutton_ranods.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 106,
+    "name": "Mutton 65",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "mutton_65.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 107,
+    "name": "Mutton Kebab",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "mutton_kebab.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 108,
+    "name": "Mutton Chilly",
+    "category": "Chinese Starters",
+    "isVeg": false,
+    "filename": "mutton_chilly.jpg",
+    "hash": "4d067ebb8a7e8797faa734236679fa74"
+  },
+  {
+    "id": 109,
+    "name": "Hara Bhara Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "hara_bhara_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 110,
+    "name": "Aloo Tikki",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "aloo_tikki.jpg",
+    "hash": "5cb352bf2df621db801a354f5be5ccb9"
+  },
+  {
+    "id": 111,
+    "name": "Babycorn Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "babycorn_tikka.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 112,
+    "name": "Tandoori Aloo Gobi",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "tandoori_aloo_gobi.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 113,
+    "name": "Mushroom Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "mushroom_tikka.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 114,
+    "name": "Paneer Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "paneer_tikka.jpg",
+    "hash": "5cb352bf2df621db801a354f5be5ccb9"
+  },
+  {
+    "id": 115,
+    "name": "Paneer Hariyali Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "paneer_hariyali_tikka.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 116,
+    "name": "Paneer Cheese Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "paneer_cheese_tikka.jpg",
+    "hash": "5cb352bf2df621db801a354f5be5ccb9"
+  },
+  {
+    "id": 117,
+    "name": "Paneer Lasooni Tikka",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "paneer_lasooni_tikka.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 118,
+    "name": "Paneer Malai Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "paneer_malai_kabab.jpg",
+    "hash": "5cb352bf2df621db801a354f5be5ccb9"
+  },
+  {
+    "id": 119,
+    "name": "Paneer Platter (Full)",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "paneer_platter.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 120,
+    "name": "Paneer Platter (Half)",
+    "category": "Tandoor Starters",
+    "isVeg": true,
+    "filename": "paneer_platter.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 121,
+    "name": "Chicken Kabab (Full)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 122,
+    "name": "Chicken Kabab (Half)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 123,
+    "name": "Chicken Kalmi Kabab (1 pc)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_kalmi_kabab_1_pc.jpg",
+    "hash": "MISSING"
+  },
+  {
+    "id": 124,
+    "name": "Chicken Tangdi Kabab (2 pcs)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_tangdi_kabab_2_pcs.jpg",
+    "hash": "MISSING"
+  },
+  {
+    "id": 125,
+    "name": "Chicken Tikka Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_tikka_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 126,
+    "name": "Chicken Malai Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_malai_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 127,
+    "name": "Chicken Adraki Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_adraki_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 128,
+    "name": "Chicken Angara Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_angara_kabab.jpg",
+    "hash": "5cb352bf2df621db801a354f5be5ccb9"
+  },
+  {
+    "id": 129,
+    "name": "Chicken Hariyali Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_hariyali_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 130,
+    "name": "Chicken Seekh Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_seekh_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 131,
+    "name": "Chicken Khole Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_khole_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 132,
+    "name": "Chicken Banjara Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_banjara_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 133,
+    "name": "Chicken Reshmi Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_reshmi_kabab.jpg",
+    "hash": "5cb352bf2df621db801a354f5be5ccb9"
+  },
+  {
+    "id": 134,
+    "name": "Chicken Kasturi Kabab",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_kasturi_kabab.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 135,
+    "name": "Chicken Tandoori (Full)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_tandoori.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 136,
+    "name": "Chicken Tandoori (Half)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_tandoori.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 137,
+    "name": "Chicken Platter (Full)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_platter.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 138,
+    "name": "Chicken Platter (Half)",
+    "category": "Tandoor Starters",
+    "isVeg": false,
+    "filename": "chicken_platter.jpg",
+    "hash": "4b3c3f6ba8da0f65db58fe3270afdf71"
+  },
+  {
+    "id": 139,
+    "name": "Boiled Egg (2 pcs)",
+    "category": "Egg Dishes",
+    "isVeg": false,
+    "filename": "boiled_egg_2_pcs.jpg",
+    "hash": "MISSING"
+  },
+  {
+    "id": 140,
+    "name": "Egg Half Fry",
+    "category": "Egg Dishes",
+    "isVeg": false,
+    "filename": "egg_half_fry.jpg",
+    "hash": "416aa1d9774dd6f427e6180f3d0d82f3"
+  },
+  {
+    "id": 141,
+    "name": "Egg Omelette",
+    "category": "Egg Dishes",
+    "isVeg": false,
+    "filename": "egg_omelette.jpg",
+    "hash": "416aa1d9774dd6f427e6180f3d0d82f3"
+  },
+  {
+    "id": 142,
+    "name": "Egg Bhurji",
+    "category": "Egg Dishes",
+    "isVeg": false,
+    "filename": "egg_bhurji.jpg",
+    "hash": "416aa1d9774dd6f427e6180f3d0d82f3"
+  },
+  {
+    "id": 143,
+    "name": "Pomfret Tandoori",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "pomfret_tandoori.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 144,
+    "name": "Pomfret Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "pomfret_tawa_fry.jpg",
+    "hash": "038a72e7a1a36f6aace9365a7b91fdff"
+  },
+  {
+    "id": 145,
+    "name": "Pomfret Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "pomfret_rawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 146,
+    "name": "Pomfret Masala Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "pomfret_masala_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 147,
+    "name": "Pomfret Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "pomfret_curry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 148,
+    "name": "King Fish Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "king_fish_rawa_fry.jpg",
+    "hash": "038a72e7a1a36f6aace9365a7b91fdff"
+  },
+  {
+    "id": 149,
+    "name": "King Fish Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "king_fish_tawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 150,
+    "name": "King Fish Masala Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "king_fish_masala_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 151,
+    "name": "King Fish Biryani",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "king_fish_biryani.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 152,
+    "name": "Lady Fish Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "lady_fish_rawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 153,
+    "name": "Lady Fish Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "lady_fish_tawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 154,
+    "name": "Lady Fish Masala Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "lady_fish_masala_curry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 155,
+    "name": "Silver Fish Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "silver_fish_rawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 156,
+    "name": "Silver Fish Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "silver_fish_tawa_fry.jpg",
+    "hash": "038a72e7a1a36f6aace9365a7b91fdff"
+  },
+  {
+    "id": 157,
+    "name": "Silver Fish Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "silver_fish_curry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 158,
+    "name": "Shark Chilli",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "shark_chilli.jpg",
+    "hash": "038a72e7a1a36f6aace9365a7b91fdff"
+  },
+  {
+    "id": 159,
+    "name": "Shark Masala Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "shark_masala_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 160,
+    "name": "Shark Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "shark_curry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 161,
+    "name": "Bangda Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "bangda_rawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 162,
+    "name": "Bangda Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "bangda_tawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 163,
+    "name": "Bangda Masala Curry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "bangda_masala_curry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 164,
+    "name": "Prawns Ghee Roast",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "prawns_ghee_roast.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 165,
+    "name": "Prawns Butter Garlic",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "prawns_butter_garlic.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 166,
+    "name": "Prawns Rawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "prawns_rawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 167,
+    "name": "Prawns Masala Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "prawns_masala_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 168,
+    "name": "Prawns Chilli",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "prawns_chilli.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 169,
+    "name": "Prawns Biryani",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "prawns_biryani.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 170,
+    "name": "Squid Ghee Roast",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "squid_ghee_roast.jpg",
+    "hash": "038a72e7a1a36f6aace9365a7b91fdff"
+  },
+  {
+    "id": 171,
+    "name": "Squid Sukka",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "squid_sukka.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 172,
+    "name": "Squid Butter Garlic",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "squid_butter_garlic.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 173,
+    "name": "Squid Pepper Dry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "squid_pepper_dry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 174,
+    "name": "Crab Ghee Roast",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "crab_ghee_roast.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 175,
+    "name": "Crab Sukka",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "crab_sukka.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 176,
+    "name": "Crab Butter Garlic",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "crab_butter_garlic.jpg",
+    "hash": "038a72e7a1a36f6aace9365a7b91fdff"
+  },
+  {
+    "id": 177,
+    "name": "Crab Pepper Dry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "crab_pepper_dry.jpg",
+    "hash": "038a72e7a1a36f6aace9365a7b91fdff"
+  },
+  {
+    "id": 178,
+    "name": "Dhodi Rawa / Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "dhodi_rawa_tawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 179,
+    "name": "Nang Tawa Fry",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "nang_tawa_fry.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 180,
+    "name": "Shell Fish Sukka",
+    "category": "Seafood Specials",
+    "isVeg": false,
+    "filename": "shell_fish_sukka.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  },
+  {
+    "id": 181,
+    "name": "Aloo Jeera",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "aloo_jeera.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 184,
+    "name": "Capsicum Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "capsicum_masala.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 187,
+    "name": "Dal Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "dal_kolhapuri.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 191,
+    "name": "Veg Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "veg_handi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 195,
+    "name": "Veg Kadai",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "veg_kadai.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 196,
+    "name": "Lasooni Palak",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "lasooni_palak.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 197,
+    "name": "Paneer Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "paneer_kolhapuri.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 202,
+    "name": "Veg Diwani Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "veg_diwani_handi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 203,
+    "name": "Veg Tawa Masala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "veg_tawa_masala.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 204,
+    "name": "Mushroom Kadai",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "mushroom_kadai.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 206,
+    "name": "Plain Palak",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "plain_palak.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 208,
+    "name": "Paneer Hyderabadi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "paneer_hyderabadi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 213,
+    "name": "Kaju Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "kaju_kolhapuri.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 215,
+    "name": "Kaju Hyderabadi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "kaju_hyderabadi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 217,
+    "name": "Kaju Makhanwala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "kaju_makhanwala.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 219,
+    "name": "Veg Patiala",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "veg_patiala.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 224,
+    "name": "Mushroom Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "mushroom_handi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 225,
+    "name": "Paneer Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "paneer_handi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 226,
+    "name": "Kaju Paneer Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "kaju_paneer_handi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 227,
+    "name": "Kaju Handi",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "kaju_handi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 228,
+    "name": "Julius Special Veg",
+    "category": "Indian Gravies",
+    "isVeg": true,
+    "filename": "julius_special_veg.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 230,
+    "name": "Egg Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "egg_kolhapuri.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 231,
+    "name": "Egg Hyderabadi",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "egg_hyderabadi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 232,
+    "name": "Egg Makhanwala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "egg_makhanwala.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 233,
+    "name": "Egg Maharaja",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "egg_maharaja.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 234,
+    "name": "Egg Afghani",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "egg_afghani.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 237,
+    "name": "Gadde Lur-Sukka",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "gadde_lur_sukka.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 239,
+    "name": "Chicken Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "chicken_kolhapuri.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 243,
+    "name": "Chicken Mughlai",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "chicken_mughlai.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 247,
+    "name": "Chicken Malwani",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "chicken_malwani.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 248,
+    "name": "Kundapur Chicken",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "kundapur_chicken.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 250,
+    "name": "Chicken Julius Special",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "chicken_julius_special.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 251,
+    "name": "Chicken Adraki Masala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "chicken_adraki_masala.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 253,
+    "name": "Mutton Handi",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "mutton_handi.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 254,
+    "name": "Mutton Kadai",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "mutton_kadai.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 255,
+    "name": "Mutton Kolhapuri",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "mutton_kolhapuri.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 256,
+    "name": "Mutton Makhanwala",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "mutton_makhanwala.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 257,
+    "name": "Mutton Ginger",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "mutton_ginger.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 258,
+    "name": "Mutton Rogan Josh",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "mutton_rogan_josh.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 259,
+    "name": "Mutton Malwani",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "mutton_malwani.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 260,
+    "name": "Mutton Julius Special",
+    "category": "Indian Gravies",
+    "isVeg": false,
+    "filename": "mutton_julius_special.jpg",
+    "hash": "b9b798912b3e0cc76b400b5006c20809"
+  },
+  {
+    "id": 261,
+    "name": "Tandoori Roti",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "tandoori_roti.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 262,
+    "name": "Butter Roti",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "butter_roti.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 263,
+    "name": "Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "naan.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 264,
+    "name": "Butter Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "butter_naan.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 265,
+    "name": "Butter Garlic Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "butter_garlic_naan.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 266,
+    "name": "Cheese Butter Garlic Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "cheese_butter_garlic_naan.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 267,
+    "name": "Garlic Naan",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "garlic_naan.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 268,
+    "name": "Kulcha",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "kulcha.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 269,
+    "name": "Butter Kulcha",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "butter_kulcha.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 270,
+    "name": "Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "parota.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 271,
+    "name": "Butter Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "butter_parota.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 272,
+    "name": "Garlic Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "garlic_parota.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 273,
+    "name": "Cheese Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "cheese_parota.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 274,
+    "name": "Methi Roti",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "methi_roti.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 275,
+    "name": "Aloo Stuffed Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "aloo_stuffed_parota.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 276,
+    "name": "Paneer Stuffed Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "paneer_stuffed_parota.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 277,
+    "name": "Veg Stuffed Parota",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "veg_stuffed_parota.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 278,
+    "name": "Chicken Stuffed Parota",
+    "category": "Indian Breads",
+    "isVeg": false,
+    "filename": "chicken_stuffed_parota.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 279,
+    "name": "Chapathi",
+    "category": "Indian Breads",
+    "isVeg": true,
+    "filename": "chapathi.jpg",
+    "hash": "abd62d4d3a751416b3a613329f96e3e7"
+  },
+  {
+    "id": 280,
+    "name": "Veg Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "veg_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 281,
+    "name": "Veg Schezwan Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "veg_schezwan_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 282,
+    "name": "Veg Schezwan Triple Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "veg_schezwan_triple_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 283,
+    "name": "Veg Hong Kong Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "veg_hong_kong_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 284,
+    "name": "Veg Singapore Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "veg_singapore_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 285,
+    "name": "Mushroom Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "mushroom_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 286,
+    "name": "Paneer Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "paneer_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 287,
+    "name": "Onion Chilli Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "onion_chilli_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 288,
+    "name": "Egg Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "filename": "egg_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 289,
+    "name": "Egg Schezwan Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "filename": "egg_schezwan_fried_rice.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 290,
+    "name": "Chicken Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "filename": "chicken_fried_rice.jpg",
+    "hash": "MISSING"
+  },
+  {
+    "id": 291,
+    "name": "Chicken Schezwan Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "filename": "chicken_schezwan_fried_rice.jpg",
+    "hash": "MISSING"
+  },
+  {
+    "id": 292,
+    "name": "Chicken Singapore Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "filename": "chicken_singapore_fried_rice.jpg",
+    "hash": "MISSING"
+  },
+  {
+    "id": 293,
+    "name": "Chicken Schezwan Triple Fried Rice",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": false,
+    "filename": "chicken_schezwan_triple_fried_rice.jpg",
+    "hash": "MISSING"
+  },
+  {
+    "id": 297,
+    "name": "Veg Crispy Noodles",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "veg_crispy_noodles.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 298,
+    "name": "Veg Hong Kong Noodles",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "veg_hong_kong_noodles.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 299,
+    "name": "Veg American Chopsuey",
+    "category": "Chinese Rice & Noodles",
+    "isVeg": true,
+    "filename": "veg_american_chopsuey.jpg",
+    "hash": "809ef492ead00a408b1b4e8a49478d61"
+  },
+  {
+    "id": 306,
+    "name": "Kuska Rice (Full)",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "filename": "kuska_rice.jpg",
+    "hash": "5afe4681b97020c99c4248315ab79b24"
+  },
+  {
+    "id": 307,
+    "name": "Kuska Rice (Half)",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "filename": "kuska_rice.jpg",
+    "hash": "5afe4681b97020c99c4248315ab79b24"
+  },
+  {
+    "id": 315,
+    "name": "Palak Rice",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "filename": "palak_rice.jpg",
+    "hash": "5afe4681b97020c99c4248315ab79b24"
+  },
+  {
+    "id": 317,
+    "name": "Peas Pulao",
+    "category": "Biryani & Indian Rice",
+    "isVeg": true,
+    "filename": "peas_pulao.jpg",
+    "hash": "5afe4681b97020c99c4248315ab79b24"
+  },
+  {
+    "id": 324,
+    "name": "Chicken Kolhapuri Biryani",
+    "category": "Biryani & Indian Rice",
+    "isVeg": false,
+    "filename": "chicken_kolhapuri_biryani.jpg",
+    "hash": "5afe4681b97020c99c4248315ab79b24"
+  },
+  {
+    "id": 325,
+    "name": "Prawns Biryani",
+    "category": "Biryani & Indian Rice",
+    "isVeg": false,
+    "filename": "prawns_biryani.jpg",
+    "hash": "90303eca7e8d3038447ef40318416b75"
+  }
+]

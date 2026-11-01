@@ -9,7 +9,8 @@
     "prisma:generate": "npx prisma generate",
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:studio": "npx prisma studio",
-    "prisma:seed": "node prisma/seed.js"
+    "prisma:seed": "node prisma/seed.js",
+    "update-images": "node scripts/update-menu-images.js"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
